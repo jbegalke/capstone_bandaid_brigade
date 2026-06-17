@@ -1,0 +1,1001 @@
+diagnoses_id,diagnosis_code ,name 
+1,DX000001,Type 2 Diabetes Mellitus
+2,DX000002,Essential Hypertension
+3,DX000003,Asthma
+4,DX000004,Chronic Obstructive Pulmonary Disease
+5,DX000005,Pneumonia
+6,DX000006,Acute Bronchitis
+7,DX000007,Hyperlipidemia
+8,DX000008,Depression
+9,DX000009,Anxiety Disorder
+10,DX000010,Migraine
+11,DX000011,Osteoarthritis
+12,DX000012,Rheumatoid Arthritis
+13,DX000013,Gastroesophageal Reflux Disease
+14,DX000014,Urinary Tract Infection
+15,DX000015,Chronic Kidney Disease
+16,DX000016,Hypothyroidism
+17,DX000017,Hyperthyroidism
+18,DX000018,Obesity
+19,DX000019,Iron Deficiency Anemia
+20,DX000020,Allergic Rhinitis
+21,DX000021,Acute Upper Respiratory Infection
+22,DX000022,Influenza
+23,DX000023,COVID-19
+24,DX000024,Tuberculosis
+25,DX000025,Sepsis
+26,DX000026,Meningitis
+27,DX000027,Appendicitis
+28,DX000028,Gallstones
+29,DX000029,Hepatitis A
+30,DX000030,Hepatitis B
+31,DX000031,Hepatitis C
+32,DX000032,Peptic Ulcer Disease
+33,DX000033,Irritable Bowel Syndrome
+34,DX000034,Crohn Disease
+35,DX000035,Ulcerative Colitis
+36,DX000036,Stroke
+37,DX000037,Transient Ischemic Attack
+38,DX000038,Epilepsy
+39,DX000039,Parkinson Disease
+40,DX000040,Alzheimer Disease
+41,DX000041,Multiple Sclerosis
+42,DX000042,Peripheral Neuropathy
+43,DX000043,Carpal Tunnel Syndrome
+44,DX000044,Sciatica
+45,DX000045,Back Pain
+46,DX000046,Neck Pain
+47,DX000047,Fibromyalgia
+48,DX000048,Gout
+49,DX000049,Osteoporosis
+50,DX000050,Benign Prostatic Hyperplasia
+51,DX000051,Prostate Cancer
+52,DX000052,Breast Cancer
+53,DX000053,Lung Cancer
+54,DX000054,Colon Cancer
+55,DX000055,Skin Cancer
+56,DX000056,Leukemia
+57,DX000057,Lymphoma
+58,DX000058,Anemia of Chronic Disease
+59,DX000059,Aplastic Anemia
+60,DX000060,Sickle Cell Disease
+61,DX000061,Thalassemia
+62,DX000062,Dengue Fever
+63,DX000063,Malaria
+64,DX000064,Typhoid Fever
+65,DX000065,Cholera
+66,DX000066,Lyme Disease
+67,DX000067,Syphilis
+68,DX000068,Gonorrhea
+69,DX000069,Chlamydia Infection
+70,DX000070,Pelvic Inflammatory Disease
+71,DX000071,Endometriosis
+72,DX000072,Polycystic Ovary Syndrome
+73,DX000073,Menstrual Disorder
+74,DX000074,Erectile Dysfunction
+75,DX000075,Infertility
+76,DX000076,Kidney Stones
+77,DX000077,Urinary Retention
+78,DX000078,Bladder Infection
+79,DX000079,Acute Renal Failure
+80,DX000080,Chronic Liver Disease
+81,DX000081,Cirrhosis
+82,DX000082,Fatty Liver Disease
+83,DX000083,Pancreatitis
+84,DX000084,Pancreatic Cancer
+85,DX000085,Thyroid Nodule
+86,DX000086,Goiter
+87,DX000087,Cushing Syndrome
+88,DX000088,Addison Disease
+89,DX000089,Metabolic Syndrome
+90,DX000090,Vitamin D Deficiency
+91,DX000091,Vitamin B12 Deficiency
+92,DX000092,Dehydration
+93,DX000093,Electrolyte Imbalance
+94,DX000094,Hyponatremia
+95,DX000095,Hypernatremia
+96,DX000096,Hypokalemia
+97,DX000097,Hyperkalemia
+98,DX000098,Hypoglycemia
+99,DX000099,Hyperglycemia
+100,DX000100,Diabetic Ketoacidosis
+101,DX000101,Hyperosmolar Hyperglycemic State
+102,DX000102,Heart Failure
+103,DX000103,Coronary Artery Disease
+104,DX000104,Myocardial Infarction
+105,DX000105,Angina Pectoris
+106,DX000106,Atrial Fibrillation
+107,DX000107,Ventricular Tachycardia
+108,DX000108,Bradycardia
+109,DX000109,Hypertensive Heart Disease
+110,DX000110,Peripheral Artery Disease
+111,DX000111,Deep Vein Thrombosis
+112,DX000112,Pulmonary Embolism
+113,DX000113,Varicose Veins
+114,DX000114,Aortic Aneurysm
+115,DX000115,Cardiomyopathy
+116,DX000116,Endocarditis
+117,DX000117,Pericarditis
+118,DX000118,Myocarditis
+119,DX000119,Asthmatic Bronchitis
+120,DX000120,Chronic Sinusitis
+121,DX000121,Acute Sinusitis
+122,DX000122,Otitis Media
+123,DX000123,Otitis Externa
+124,DX000124,Tonsillitis
+125,DX000125,Pharyngitis
+126,DX000126,Laryngitis
+127,DX000127,Bronchiolitis
+128,DX000128,Pleural Effusion
+129,DX000129,Pleurisy
+130,DX000130,Pneumothorax
+131,DX000131,Respiratory Failure
+132,DX000132,Sleep Apnea
+133,DX000133,Insomnia
+134,DX000134,Restless Leg Syndrome
+135,DX000135,Narcolepsy
+136,DX000136,Anorexia Nervosa
+137,DX000137,Bulimia Nervosa
+138,DX000138,Binge Eating Disorder
+139,DX000139,Alcohol Use Disorder
+140,DX000140,Substance Use Disorder
+141,DX000141,Nicotine Dependence
+142,DX000142,Post-Traumatic Stress Disorder
+143,DX000143,Bipolar Disorder
+144,DX000144,Schizophrenia
+145,DX000145,Obsessive Compulsive Disorder
+146,DX000146,Personality Disorder
+147,DX000147,Autism Spectrum Disorder
+148,DX000148,Attention Deficit Hyperactivity Disorder
+149,DX000149,Learning Disability
+150,DX000150,Intellectual Disability
+151,DX000151,Developmental Delay
+152,DX000152,Speech Disorder
+153,DX000153,Hearing Loss
+154,DX000154,Vision Impairment
+155,DX000155,Cataracts
+156,DX000156,Glaucoma
+157,DX000157,Macular Degeneration
+158,DX000158,Retinopathy
+159,DX000159,Conjunctivitis
+160,DX000160,Dry Eye Syndrome
+161,DX000161,Corneal Ulcer
+162,DX000162,Retinal Detachment
+163,DX000163,Burn Injury
+164,DX000164,Fracture
+165,DX000165,Sprain
+166,DX000166,Strain
+167,DX000167,Ligament Tear
+168,DX000168,Tendonitis
+169,DX000169,Bursitis
+170,DX000170,Osteomyelitis
+171,DX000171,Cellulitis
+172,DX000172,Abscess
+173,DX000173,Wound Infection
+174,DX000174,Dermatitis
+175,DX000175,Eczema
+176,DX000176,Psoriasis
+177,DX000177,Acne
+178,DX000178,Rosacea
+179,DX000179,Fungal Infection
+180,DX000180,Yeast Infection
+181,DX000181,Scabies
+182,DX000182,Lice Infestation
+183,DX000183,Food Poisoning
+184,DX000184,Gastroenteritis
+185,DX000185,Appendiceal Abscess
+186,DX000186,Diverticulitis
+187,DX000187,Diverticulosis
+188,DX000188,Hemorrhoids
+189,DX000189,Anal Fissure
+190,DX000190,Rectal Bleeding
+191,DX000191,Constipation
+192,DX000192,Diarrhea
+193,DX000193,Malnutrition
+194,DX000194,Failure to Thrive
+195,DX000195,Growth Hormone Deficiency
+196,DX000196,Pituitary Disorder
+197,DX000197,Thyroid Cancer
+198,DX000198,Bladder Cancer
+199,DX000199,Kidney Cancer
+200,DX000200,Stomach Cancer
+201,DX000201,Esophageal Cancer
+202,DX000202,Brain Tumor
+203,DX000203,Spinal Cord Injury
+204,DX000204,Traumatic Brain Injury
+205,DX000205,Concussion
+206,DX000206,Whiplash
+207,DX000207,Heat Stroke
+208,DX000208,Hypothermia
+209,DX000209,Frostbite
+210,DX000210,Burns
+211,DX000211,Radiation Exposure
+212,DX000212,Poisoning
+213,DX000213,Drug Overdose
+214,DX000214,Alcohol Poisoning
+215,DX000215,Shock
+216,DX000216,Cardiac Arrest
+217,DX000217,Respiratory Arrest
+218,DX000218,Septic Shock
+219,DX000219,Anaphylaxis
+220,DX000220,Allergic Reaction
+221,DX000221,Asthma Exacerbation
+222,DX000222,COPD Exacerbation
+223,DX000223,Panic Attack
+224,DX000224,Generalized Anxiety Disorder
+225,DX000225,Major Depressive Disorder
+226,DX000226,Seasonal Affective Disorder
+227,DX000227,Postpartum Depression
+228,DX000228,Premenstrual Syndrome
+229,DX000229,Premenstrual Dysphoric Disorder
+230,DX000230,Sleep Disorder
+231,DX000231,Chronic Fatigue Syndrome
+232,DX000232,Long COVID
+233,DX000233,Autoimmune Disease
+234,DX000234,Systemic Lupus Erythematosus
+235,DX000235,Scleroderma
+236,DX000236,Vasculitis
+237,DX000237,Sarcoidosis
+238,DX000238,Hemophilia
+239,DX000239,Clotting Disorder
+240,DX000240,Platelet Disorder
+241,DX000241,Leukopenia
+242,DX000242,Neutropenia
+243,DX000243,Lymphadenopathy
+244,DX000244,Splenomegaly
+245,DX000245,Hepatomegaly
+246,DX000246,Jaundice
+247,DX000247,Ascites
+248,DX000248,Portal Hypertension
+249,DX000249,Esophageal Varices
+250,DX000250,Gallbladder Disease
+251,DX000251,Cholangitis
+252,DX000252,Cholecystitis
+253,DX000253,Hernia
+254,DX000254,Hiatal Hernia
+255,DX000255,Inguinal Hernia
+256,DX000256,Umbilical Hernia
+257,DX000257,Acute Renal Colic
+258,DX000258,Chronic Migraine Disorder
+259,DX000259,Tension-Type Headache
+260,DX000260,Cluster Headache
+261,DX000261,Idiopathic Hypertension
+262,DX000262,Secondary Hypertension
+263,DX000263,Diabetic Neuropathy
+264,DX000264,Diabetic Retinopathy
+265,DX000265,Diabetic Nephropathy
+266,DX000266,Non-Alcoholic Steatohepatitis
+267,DX000267,Alcoholic Liver Disease
+268,DX000268,Acute Liver Failure
+269,DX000269,Chronic Hepatitis
+270,DX000270,Autoimmune Hepatitis
+271,DX000271,Primary Biliary Cholangitis
+272,DX000272,Primary Sclerosing Cholangitis
+273,DX000273,Acute Kidney Injury Stage 1
+274,DX000274,Acute Kidney Injury Stage 2
+275,DX000275,Acute Kidney Injury Stage 3
+276,DX000276,Nephrotic Syndrome
+277,DX000277,Nephritic Syndrome
+278,DX000278,Glomerulonephritis
+279,DX000279,Pyelonephritis
+280,DX000280,Renal Tubular Acidosis
+281,DX000281,Interstitial Nephritis
+282,DX000282,Benign Essential Tremor
+283,DX000283,Dystonia
+284,DX000284,Huntington Disease
+285,DX000285,Amyotrophic Lateral Sclerosis
+286,DX000286,Myasthenia Gravis
+287,DX000287,Guillain-Barre Syndrome
+288,DX000288,Bell's Palsy
+289,DX000289,Trigeminal Neuralgia
+290,DX000290,Facial Nerve Disorder
+291,DX000291,Spinal Stenosis
+292,DX000292,Degenerative Disc Disease
+293,DX000293,Scoliosis
+294,DX000294,Kyphosis
+295,DX000295,Lordosis
+296,DX000296,Hip Fracture
+297,DX000297,Femur Fracture
+298,DX000298,Tibia Fracture
+299,DX000299,Fibula Fracture
+300,DX000300,Wrist Fracture
+301,DX000301,Clavicle Fracture
+302,DX000302,Shoulder Dislocation
+303,DX000303,Knee Ligament Injury
+304,DX000304,Anterior Cruciate Ligament Tear
+305,DX000305,Meniscus Tear
+306,DX000306,Rotator Cuff Injury
+307,DX000307,Carpal Tunnel Syndrome Severe
+308,DX000308,Ulnar Nerve Entrapment
+309,DX000309,Radiculopathy
+310,DX000310,Peripheral Vascular Disease Stage 2
+311,DX000311,Chronic Venous Insufficiency
+312,DX000312,Lymphedema
+313,DX000313,Raynaud Phenomenon
+314,DX000314,Systemic Inflammatory Response Syndrome
+315,DX000315,Sepsis Without Organ Failure
+316,DX000316,Sepsis With Organ Failure
+317,DX000317,Multiorgan Dysfunction Syndrome
+318,DX000318,Acute Respiratory Distress Syndrome
+319,DX000319,Pulmonary Fibrosis
+320,DX000320,Interstitial Lung Disease
+321,DX000321,Occupational Lung Disease
+322,DX000322,Asbestosis
+323,DX000323,Silicosis
+324,DX000324,Coal Workers Pneumoconiosis
+325,DX000325,Pleural Plaque Disease
+326,DX000326,Bronchiectasis
+327,DX000327,Chronic Cough Syndrome
+328,DX000328,Hemoptysis
+329,DX000329,Lung Collapse Partial
+330,DX000330,Lung Collapse Complete
+331,DX000331,Acute Coronary Syndrome
+332,DX000332,Stable Angina
+333,DX000333,Unstable Angina
+334,DX000334,Cardiac Ischemia Chronic
+335,DX000335,Left Ventricular Failure
+336,DX000336,Right Ventricular Failure
+337,DX000337,Dilated Cardiomyopathy
+338,DX000338,Hypertrophic Cardiomyopathy
+339,DX000339,Restrictive Cardiomyopathy
+340,DX000340,Aortic Valve Stenosis
+341,DX000341,Aortic Valve Regurgitation
+342,DX000342,Mitral Valve Prolapse
+343,DX000343,Mitral Valve Regurgitation
+344,DX000344,Tricuspid Valve Disease
+345,DX000345,Pulmonary Valve Disorder
+346,DX000346,Pericardial Effusion
+347,DX000347,Cardiac Tamponade
+348,DX000348,Atrial Flutter
+349,DX000349,Supraventricular Tachycardia
+350,DX000350,Ventricular Fibrillation
+351,DX000351,Long QT Syndrome
+352,DX000352,Brugada Syndrome
+353,DX000353,Hypertensive Crisis
+354,DX000354,Malignant Hypertension
+355,DX000355,Orthostatic Hypotension
+356,DX000356,Shock Hypovolemic
+357,DX000357,Shock Cardiogenic
+358,DX000358,Shock Septic
+359,DX000359,Shock Neurogenic
+360,DX000360,Transient Global Amnesia
+361,DX000361,Dementia Vascular Type
+362,DX000362,Frontotemporal Dementia
+363,DX000363,Lewy Body Dementia
+364,DX000364,Major Neurocognitive Disorder
+365,DX000365,Mild Cognitive Impairment
+366,DX000366,Developmental Speech Delay
+367,DX000367,Expressive Language Disorder
+368,DX000368,Receptive Language Disorder
+369,DX000369,Stuttering Disorder
+370,DX000370,Social Anxiety Disorder
+371,DX000371,Panic Disorder
+372,DX000372,Agoraphobia
+373,DX000373,Somatic Symptom Disorder
+374,DX000374,Conversion Disorder
+375,DX000375,Factitious Disorder
+376,DX000376,Adjustment Disorder
+377,DX000377,Impulse Control Disorder
+378,DX000378,Oppositional Defiant Disorder
+379,DX000379,Conduct Disorder
+380,DX000380,Eating Disorder NOS
+381,DX000381,Night Eating Syndrome
+382,DX000382,Sleep Apnea Central
+383,DX000383,Sleep Apnea Obstructive
+384,DX000384,Circadian Rhythm Disorder
+385,DX000385,Shift Work Disorder
+386,DX000386,Insomnia Chronic
+387,DX000387,Hypersomnia
+388,DX000388,Narcolepsy Type 2
+389,DX000389,Restless Sleep Disorder
+390,DX000390,Chronic Pain Syndrome
+391,DX000391,Neuropathic Pain
+392,DX000392,Central Pain Syndrome
+393,DX000393,Phantom Limb Pain
+394,DX000394,Complex Regional Pain Syndrome
+395,DX000395,Chronic Pelvic Pain
+396,DX000396,Interstitial Cystitis
+397,DX000397,Overactive Bladder
+398,DX000398,Urinary Incontinence Stress
+399,DX000399,Urinary Incontinence Urge
+400,DX000400,Urinary Incontinence Mixed
+401,DX000401,Erectile Dysfunction Vascular
+402,DX000402,Erectile Dysfunction Psychogenic
+403,DX000403,Male Infertility
+404,DX000404,Female Infertility
+405,DX000405,Ovarian Cyst
+406,DX000406,Uterine Fibroids
+407,DX000407,Endometrial Hyperplasia
+408,DX000408,Cervical Dysplasia
+409,DX000409,Ovarian Cancer
+410,DX000410,Endometrial Cancer
+411,DX000411,Testicular Cancer
+412,DX000412,Penile Cancer
+413,DX000413,Common Cold
+414,DX000414,Seasonal Flu
+415,DX000415,Mild Fever
+416,DX000416,Viral Infection
+417,DX000417,Bacterial Infection
+418,DX000418,Ear Infection
+419,DX000419,Outer Ear Infection
+420,DX000420,Middle Ear Infection
+421,DX000421,Sinus Infection
+422,DX000422,Sore Throat
+423,DX000423,Strep Throat
+424,DX000424,Cough
+425,DX000425,Dry Cough
+426,DX000426,Productive Cough
+427,DX000427,Allergic Reaction Mild
+428,DX000428,Skin Rash
+429,DX000429,Heat Rash
+430,DX000430,Contact Dermatitis
+431,DX000431,Mild Dehydration
+432,DX000432,Moderate Dehydration
+433,DX000433,Severe Dehydration
+434,DX000434,Headache
+435,DX000435,Stress Headache
+436,DX000436,Tiredness Fatigue
+437,DX000437,Muscle Strain
+438,DX000438,Muscle Sprain
+439,DX000439,Minor Back Strain
+440,DX000440,Neck Stiffness
+441,DX000441,Minor Injury
+442,DX000442,Bruise
+443,DX000443,Minor Cut
+444,DX000444,Superficial Wound
+445,DX000445,Insect Bite
+446,DX000446,Mosquito Bite Reaction
+447,DX000447,Bee Sting Reaction
+448,DX000448,Food Allergy
+449,DX000449,Seasonal Allergy
+450,DX000450,Hay Fever
+451,DX000451,Eye Irritation
+452,DX000452,Red Eye
+453,DX000453,Eye Infection Mild
+454,DX000454,Conjunctival Irritation
+455,DX000455,Dry Skin
+456,DX000456,Itchy Skin
+457,DX000457,Minor Burn
+458,DX000458,Sunburn Mild
+459,DX000459,Sunburn Moderate
+460,DX000460,Acid Reflux Mild
+461,DX000461,Indigestion
+462,DX000462,Stomach Upset
+463,DX000463,Nausea
+464,DX000464,Vomiting
+465,DX000465,Diarrhea Acute
+466,DX000466,Constipation Mild
+467,DX000467,Abdominal Pain Mild
+468,DX000468,Gas Bloating
+469,DX000469,Loss of Appetite
+470,DX000470,Mouth Ulcer
+471,DX000471,Cold Sore
+472,DX000472,Tooth Pain
+473,DX000473,Gum Infection Mild
+474,DX000474,Dental Abscess Early
+475,DX000475,Ear Pain
+476,DX000476,Blocked Ear
+477,DX000477,Dizziness
+478,DX000478,Lightheadedness
+479,DX000479,Fainting Episode
+480,DX000480,Sleep Disturbance
+481,DX000481,Insomnia Mild
+482,DX000482,Stress Reaction
+483,DX000483,Anxiety Episode Mild
+484,DX000484,Mood Swings
+485,DX000485,Low Energy
+486,DX000486,Vitamin Deficiency Mild
+487,DX000487,Iron Deficiency Mild
+488,DX000488,Vitamin D Deficiency Mild
+489,DX000489,Seasonal Fatigue
+490,DX000490,Overexertion
+491,DX000491,Exercise Related Injury
+492,DX000492,Work Related Strain
+493,DX000493,Minor Joint Pain
+494,DX000494,Knee Pain Mild
+495,DX000495,Shoulder Pain Mild
+496,DX000496,Wrist Pain Mild
+497,DX000497,Ankle Sprain Mild
+498,DX000498,Foot Pain
+499,DX000499,Heel Pain
+500,DX000500,Plantar Fasciitis Mild
+501,DX000501,Acute Bronchial Irritation
+502,DX000502,Post Viral Cough
+503,DX000503,Recovery Phase Illness
+504,DX000504,Mild Infection Unspecified
+505,DX000505,General Malaise
+506,DX000506,Short Term Fever
+507,DX000507,Flu-like Symptoms
+508,DX000508,Upper Respiratory Irritation
+509,DX000509,Sinus Pressure
+510,DX000510,Mild Wheezing
+511,DX000511,Allergy Flare-up
+512,DX000512,Skin Dryness Severe
+513,DX000513,Scalp Itching
+514,DX000514,Dandruff Severe
+515,DX000515,Hair Loss Mild
+516,DX000516,Acne Mild
+517,DX000517,Pimples
+518,DX000518,Skin Sensitivity
+519,DX000519,Minor Swelling
+520,DX000520,Localized Infection
+521,DX000521,Mild Swelling Injury
+522,DX000522,Bruising Mild
+523,DX000523,Post Exercise Soreness
+524,DX000524,Muscle Fatigue
+525,DX000525,Joint Stiffness Mild
+526,DX000526,Post Illness Weakness
+527,DX000527,Recovery Fatigue
+528,DX000528,Mild Chest Discomfort
+529,DX000529,Non-specific Pain
+530,DX000530,Functional Abdominal Pain
+531,DX000531,Transient Headache
+532,DX000532,Tension Episode
+533,DX000533,Sleep Deprivation
+534,DX000534,Jet Lag
+535,DX000535,Shift Fatigue
+536,DX000536,Emotional Stress Reaction
+537,DX000537,Seasonal Allergic Rhinitis
+538,DX000538,Non-specific Viral Illness
+539,DX000539,Acute Febrile Illness
+540,DX000540,Unspecified Viral Syndrome
+541,DX000541,Mild Upper Airway Infection
+542,DX000542,Acute Throat Irritation
+543,DX000543,Viral Pharyngitis
+544,DX000544,Non-bacterial Tonsillitis
+545,DX000545,Acute Nasal Congestion
+546,DX000546,Chronic Nasal Congestion
+547,DX000547,Post Nasal Drip
+548,DX000548,Mild Ear Congestion
+549,DX000549,Ear Wax Blockage
+550,DX000550,Mild Hearing Reduction
+551,DX000551,Temporary Hearing Loss
+552,DX000552,Acute Eye Strain
+553,DX000553,Computer Vision Syndrome
+554,DX000554,Eye Dryness Syndrome
+555,DX000555,Mild Blurred Vision
+556,DX000556,Temporary Vision Disturbance
+557,DX000557,Light Sensitivity
+558,DX000558,Eye Fatigue
+559,DX000559,Minor Conjunctivitis
+560,DX000560,Non-specific Skin Irritation
+561,DX000561,Mild Skin Allergy
+562,DX000562,Contact Skin Reaction
+563,DX000563,Heat Related Skin Irritation
+564,DX000564,Cold Weather Skin Dryness
+565,DX000565,Minor Scalp Irritation
+566,DX000566,Hair Scalp Sensitivity
+567,DX000567,Mild Hair Thinning
+568,DX000568,Temporary Hair Shedding
+569,DX000569,Nail Brittleness
+570,DX000570,Minor Nail Infection
+571,DX000571,Ingrown Toenail Early
+572,DX000572,Ingrown Fingernail Early
+573,DX000573,Foot Arch Pain
+574,DX000574,Flat Foot Pain
+575,DX000575,Heel Spur Pain
+576,DX000576,Minor Foot Strain
+577,DX000577,Overuse Foot Injury
+578,DX000578,Hand Joint Discomfort
+579,DX000579,Finger Joint Pain Mild
+580,DX000580,Repetitive Strain Injury
+581,DX000581,Work Related Muscle Tension
+582,DX000582,Postural Back Strain
+583,DX000583,Office Neck Strain
+584,DX000584,Mild Shoulder Tightness
+585,DX000585,Muscle Overuse Pain
+586,DX000586,Delayed Muscle Soreness
+587,DX000587,Post Exercise Muscle Strain
+588,DX000588,Minor Ligament Strain
+589,DX000589,Soft Tissue Injury Mild
+590,DX000590,Bruise From Minor Trauma
+591,DX000591,Minor Impact Injury
+592,DX000592,Localized Tenderness
+593,DX000593,Mild Swelling Without Injury
+594,DX000594,Transient Pain Episode
+595,DX000595,Short Duration Head Pain
+596,DX000596,Stress Induced Head Pain
+597,DX000597,Mild Migraine Episode
+598,DX000598,Cluster Head Pain Episode
+599,DX000599,Tension Related Pain
+600,DX000600,Sleep Onset Difficulty
+601,DX000601,Intermittent Sleep Disruption
+602,DX000602,Poor Sleep Quality
+603,DX000603,Night Awakenings
+604,DX000604,Daytime Sleepiness
+605,DX000605,Fatigue After Poor Sleep
+606,DX000606,Mild Restlessness
+607,DX000607,Short Term Anxiety Episode
+608,DX000608,Performance Anxiety
+609,DX000609,Situational Stress Reaction
+610,DX000610,Emotional Overload
+611,DX000611,Mild Irritability
+612,DX000612,Mood Instability Mild
+613,DX000613,Short Term Low Mood
+614,DX000614,Adjustment Reaction Mild
+615,DX000615,Work Stress Syndrome
+616,DX000616,Academic Stress Reaction
+617,DX000617,Burnout Symptoms Mild
+618,DX000618,Cognitive Fatigue
+619,DX000619,Short Attention Span Episode
+620,DX000620,Mild Memory Lapse
+621,DX000621,Temporary Confusion Episode
+622,DX000622,Lightheaded Episode
+623,DX000623,Postural Dizziness
+624,DX000624,Standing Related Dizziness
+625,DX000625,Mild Balance Disturbance
+626,DX000626,Low Blood Pressure Episode
+627,DX000627,Transient Weakness Episode
+628,DX000628,Mild Physical Exhaustion
+629,DX000629,Energy Drop Episode
+630,DX000630,Post Illness Recovery Phase
+631,DX000631,Viral Recovery Fatigue
+632,DX000632,General Weakness Episode
+633,DX000633,Mild Fever Without Source
+634,DX000634,Low Grade Fever Episode
+635,DX000635,Intermittent Fever Pattern
+636,DX000636,Night Sweats Mild
+637,DX000637,Mild Chills Episode
+638,DX000638,Body Ache Generalized
+639,DX000639,Flu Recovery Phase
+640,DX000640,Post Viral Weakness
+641,DX000641,Immune Response Reaction
+642,DX000642,Mild Inflammatory Response
+643,DX000643,Non-specific Infection Symptoms
+644,DX000644,General Health Decline Temporary
+645,DX000645,Minor Respiratory Irritation
+646,DX000646,Mild Chest Tightness Non-cardiac
+647,DX000647,Breathing Discomfort Mild
+648,DX000648,Shortness of Breath Mild Exertion
+649,DX000649,Exercise Intolerance Mild
+650,DX000650,Reduced Stamina
+651,DX000651,Mild Digestive Upset
+652,DX000652,Post Meal Discomfort
+653,DX000653,Food Sensitivity Reaction
+654,DX000654,Temporary Appetite Change
+655,DX000655,Mild Nausea Episode
+656,DX000656,Acid Sensitivity Stomach
+657,DX000657,Gastric Discomfort Mild
+658,DX000658,Abdominal Bloating Episode
+659,DX000659,Irregular Bowel Movement
+660,DX000660,Functional Constipation Episode
+661,DX000661,Loose Stool Episode
+662,DX000662,Temporary Diarrhea Episode
+663,DX000663,Gut Sensitivity Reaction
+664,DX000664,Mild Dehydration Episode
+665,DX000665,Fluid Loss Mild
+666,DX000666,Electrolyte Imbalance Mild
+667,DX000667,Vitamin Intake Deficiency Mild
+668,DX000668,Iron Level Low Mild
+669,DX000669,General Nutritional Deficiency Mild
+670,DX000670,Transient Viral Infection
+671,DX000671,Mild Respiratory Illness
+672,DX000672,Unspecified Upper Respiratory Condition
+673,DX000673,Acute Nose Throat Infection
+674,DX000674,Seasonal Upper Airway Illness
+675,DX000675,Non-specific Flu-like Condition
+676,DX000676,Mild Infectious Episode
+677,DX000677,Short Duration Viral Condition
+678,DX000678,Self-limiting Infection
+679,DX000679,Mild Community Acquired Infection
+680,DX000680,Acute Cough Syndrome
+681,DX000681,Non-specific Cough Illness
+682,DX000682,Irritated Airway Condition
+683,DX000683,Temporary Bronchial Irritation
+684,DX000684,Mild Breathing Discomfort Episode
+685,DX000685,Upper Chest Irritation
+686,DX000686,Non-cardiac Chest Sensation
+687,DX000687,Mild Chest Pressure Episode
+688,DX000688,Short Term Breathing Issue
+689,DX000689,Exercise Induced Breathlessness
+690,DX000690,Mild Physical Activity Intolerance
+691,DX000691,Temporary Reduced Lung Capacity
+692,DX000692,Mild Oxygen Demand Imbalance
+693,DX000693,Short Term Fatigue Condition
+694,DX000694,General Physical Exhaustion
+695,DX000695,Temporary Energy Deficit
+696,DX000696,Low Physical Endurance Episode
+697,DX000697,Post Activity Recovery State
+698,DX000698,Mild Muscle Overuse Condition
+699,DX000699,Repetitive Movement Strain
+700,DX000700,Work Related Physical Fatigue
+701,DX000701,Prolonged Sitting Strain
+702,DX000702,Postural Muscle Discomfort
+703,DX000703,Neck Muscle Overload
+704,DX000704,Shoulder Muscle Tension
+705,DX000705,Lower Back Muscle Fatigue
+706,DX000706,Upper Back Tightness Condition
+707,DX000707,Joint Overuse Sensation
+708,DX000708,Minor Joint Irritation Episode
+709,DX000709,Transient Joint Discomfort
+710,DX000710,Mechanical Joint Strain
+711,DX000711,Non-inflammatory Joint Pain
+712,DX000712,Activity Related Knee Pain
+713,DX000713,Ankle Overuse Condition
+714,DX000714,Foot Pressure Pain
+715,DX000715,Heel Stress Reaction
+716,DX000716,Wrist Overuse Condition
+717,DX000717,Hand Fatigue Syndrome
+718,DX000718,Finger Joint Stress
+719,DX000719,Minor Soft Tissue Strain
+720,DX000720,Localized Tissue Stress
+721,DX000721,Superficial Injury Reaction
+722,DX000722,Minor Trauma Response
+723,DX000723,Impact Related Pain Episode
+724,DX000724,Bruise Healing Stage
+725,DX000725,Post Injury Sensitivity
+726,DX000726,Localized Tender Area
+727,DX000727,Temporary Swelling Reaction
+728,DX000728,Mild Edema Episode
+729,DX000729,Non-specific Skin Reaction
+730,DX000730,Transient Rash Condition
+731,DX000731,Environmental Skin Sensitivity
+732,DX000732,Seasonal Skin Irritation
+733,DX000733,Mild Dermatologic Reaction
+734,DX000734,Dry Air Skin Response
+735,DX000735,Heat Exposure Skin Reaction
+736,DX000736,Cold Exposure Skin Sensitivity
+737,DX000737,Non-allergic Skin Flare
+738,DX000738,Mild Itch Condition
+739,DX000739,Localized Skin Redness
+740,DX000740,Temporary Skin Discomfort
+741,DX000741,Minor Infection Response
+742,DX000742,Localized Bacterial Response
+743,DX000743,Low Grade Inflammatory Reaction
+744,DX000744,Mild Immune Response State
+745,DX000745,Transient Immune Activation
+746,DX000746,Post Infection Recovery Stage
+747,DX000747,Viral Clearance Phase
+748,DX000748,Immune Recovery Condition
+749,DX000749,General System Response
+750,DX000750,Mild Fever Reaction
+751,DX000751,Temperature Fluctuation Episode
+752,DX000752,Low Intensity Fever State
+753,DX000753,Short Term Temperature Spike
+754,DX000754,Non-specific Temperature Change
+755,DX000755,Mild Chills Reaction
+756,DX000756,Transient Sweating Episode
+757,DX000757,Night Temperature Variation
+758,DX000758,Body Temperature Instability
+759,DX000759,General Malaise State
+760,DX000760,Non-specific Weakness Episode
+761,DX000761,Temporary Health Decline
+762,DX000762,Short Term Wellness Reduction
+763,DX000763,Mild Energy Fluctuation
+764,DX000764,Daily Fatigue Cycle
+765,DX000765,Temporary Weakness Phase
+766,DX000766,Reduced Activity Tolerance
+767,DX000767,Low Motivation Episode
+768,DX000768,Short Term Mood Drop
+769,DX000769,Emotional Fatigue State
+770,DX000770,Stress Induced Response
+771,DX000771,Situational Stress Episode
+772,DX000772,Short Duration Anxiety Reaction
+773,DX000773,Mild Emotional Strain
+774,DX000774,Mental Overload Condition
+775,DX000775,Cognitive Stress Episode
+776,DX000776,Attention Fatigue State
+777,DX000777,Short Term Focus Reduction
+778,DX000778,Mental Exhaustion Episode
+779,DX000779,Decision Fatigue Condition
+780,DX000780,Sleep Disruption Episode
+781,DX000781,Irregular Sleep Pattern
+782,DX000782,Delayed Sleep Onset
+783,DX000783,Interrupted Sleep Cycle
+784,DX000784,Non-restorative Sleep
+785,DX000785,Daytime Drowsiness Episode
+786,DX000786,Sleep Debt Condition
+787,DX000787,Temporary Insomnia State
+788,DX000788,Circadian Rhythm Shift
+789,DX000789,Jet Lag Like Condition
+790,DX000790,Post-viral inflammatory syndrome
+791,DX000791,Unresolved respiratory irritation
+792,DX000792,Functional breathing irregularity
+793,DX000793,Benign episodic dizziness disorder
+794,DX000794,Transient circulatory instability
+795,DX000795,Mild autonomic imbalance episode
+796,DX000796,Non-specific systemic reaction
+797,DX000797,Temporary immune dysregulation
+798,DX000798,Low-grade systemic inflammation
+799,DX000799,Self-limiting febrile condition
+800,DX000800,Unclassified infectious presentation
+801,DX000801,Undetermined viral exposure response
+802,DX000802,Non-specific neurological complaint
+803,DX000803,Transient sensory disturbance
+804,DX000804,Mild cognitive disruption episode
+805,DX000805,Short-term concentration impairment
+806,DX000806,Temporary memory inconsistency
+807,DX000807,Stress-related somatic response
+808,DX000808,Psychophysiological stress manifestation
+809,DX000809,Mild neurovegetative imbalance
+810,DX000810,Situational adaptation disorder
+811,DX000811,Acute emotional stress response
+812,DX000812,Non-specific affective disturbance
+813,DX000813,Short duration mood instability
+814,DX000814,Transient behavioral change episode
+815,DX000815,Adjustment difficulty syndrome
+816,DX000816,Environmental sensitivity reaction
+817,DX000817,Seasonal physiological adaptation
+818,DX000818,Climate-related symptom response
+819,DX000819,Temperature sensitivity disorder
+820,DX000820,Light exposure intolerance
+821,DX000821,Noise sensitivity reaction
+822,DX000822,Mild hypersensitivity condition
+823,DX000823,Non-allergic hypersensitivity response
+824,DX000824,Generalized discomfort syndrome
+825,DX000825,Diffuse pain syndrome mild
+826,DX000826,Non-localized pain condition
+827,DX000827,Unspecified musculoskeletal strain
+828,DX000828,Functional movement limitation
+829,DX000829,Temporary mobility reduction
+830,DX000830,Activity-induced discomfort syndrome
+831,DX000831,Post-exertional symptom flare
+832,DX000832,Overexertion recovery state
+833,DX000833,Physical deconditioning syndrome
+834,DX000834,Reduced functional capacity episode
+835,DX000835,Short-term endurance decline
+836,DX000836,Temporary strength reduction
+837,DX000837,Muscle efficiency impairment
+838,DX000838,Non-specific fatigue syndrome
+839,DX000839,Chronic mild fatigue state
+840,DX000840,Intermittent energy depletion episodes
+841,DX000841,Activity recovery delay syndrome
+842,DX000842,Post-activity soreness condition
+843,DX000843,Delayed physiological recovery
+844,DX000844,Minor metabolic imbalance episode
+845,DX000845,Transient nutritional insufficiency state
+846,DX000846,Hydration imbalance mild state
+847,DX000847,Electrolyte fluctuation condition
+848,DX000848,Short-term metabolic stress
+849,DX000849,Gastrointestinal functional disturbance
+850,DX000850,Non-organic digestive discomfort
+851,DX000851,Post-meal digestive delay
+852,DX000852,Functional gut motility issue
+853,DX000853,Transient bowel irregularity state
+854,DX000854,Non-specific abdominal sensitivity
+855,DX000855,Digestive rhythm disruption
+856,DX000856,Mild gastric intolerance episode
+857,DX000857,Temporary appetite dysregulation
+858,DX000858,Food response sensitivity syndrome
+859,DX000859,Non-allergic food reaction
+860,DX000860,Digestive adaptation issue
+861,DX000861,Mild intestinal stress response
+862,DX000862,Transient absorption inefficiency
+863,DX000863,Functional elimination irregularity
+864,DX000864,Short-term constipation tendency
+865,DX000865,Loose stool functional episode
+866,DX000866,Digestive system irritation state
+867,DX000867,Respiratory functional irritation syndrome
+868,DX000868,Airway sensitivity transient condition
+869,DX000869,Mild ventilation inefficiency episode
+870,DX000870,Short-term breathing pattern irregularity
+871,DX000871,Functional cough reflex activation
+872,DX000872,Non-specific airway responsiveness
+873,DX000873,Transient bronchial hyperreactivity
+874,DX000874,Minimal airway obstruction episode
+875,DX000875,Temporary oxygen exchange inefficiency
+876,DX000876,Respiratory adaptation stress response
+877,DX000877,Cardiovascular adaptation response mild
+878,DX000878,Transient heart rate variability issue
+879,DX000879,Functional circulation fluctuation
+880,DX000880,Non-specific blood pressure variation
+881,DX000881,Temporary perfusion irregularity
+882,DX000882,Orthostatic adaptation delay
+883,DX000883,Postural circulation adjustment issue
+884,DX000884,Transient vascular tone imbalance
+885,DX000885,Mild perfusion instability episode
+886,DX000886,Short-term cardiac workload adaptation
+887,DX000887,Sleep regulation disruption syndrome
+888,DX000888,Circadian misalignment condition
+889,DX000889,Sleep architecture disturbance
+890,DX000890,Non-restorative sleep pattern
+891,DX000891,Transient sleep efficiency reduction
+892,DX000892,Sleep initiation dysfunction mild
+893,DX000893,Sleep maintenance instability
+894,DX000894,Irregular sleep-wake transition
+895,DX000895,Temporary sleep cycle fragmentation
+896,DX000896,Reduced sleep quality episode
+897,DX000897,Wakefulness regulation imbalance
+898,DX000898,Neurocognitive fatigue syndrome mild
+899,DX000899,Mental processing slowdown episode
+900,DX000900,Attention regulation fluctuation
+901,DX000901,Short-term executive function reduction
+902,DX000902,Cognitive throughput variability
+903,DX000903,Information processing delay mild
+904,DX000904,Decision-making fatigue syndrome
+905,DX000905,Working memory fluctuation episode
+906,DX000906,Mental clarity reduction transient
+907,DX000907,Cognitive load intolerance state
+908,DX000908,Mild seasonal respiratory irritation
+909,DX000909,Acute environmental exposure reaction
+910,DX000910,Temporary airborne irritant response
+911,DX000911,Non-specific allergen exposure effect
+912,DX000912,Mild chemical sensitivity reaction
+913,DX000913,Short-term pollutant exposure response
+914,DX000914,Urban air quality sensitivity reaction
+915,DX000915,Dust exposure respiratory irritation
+916,DX000916,Pollen exposure response episode
+917,DX000917,Mild occupational exposure reaction
+918,DX000918,Workplace irritant sensitivity syndrome
+919,DX000919,Temporary indoor air sensitivity
+920,DX000920,Ventilation-related discomfort episode
+921,DX000921,Mild humidity-related respiratory effect
+922,DX000922,Temperature shift physiological response
+923,DX000923,Sudden weather change reaction
+924,DX000924,Climate adaptation discomfort episode
+925,DX000925,Mild barometric pressure sensitivity
+926,DX000926,Altitude adjustment response mild
+927,DX000927,Travel-related physiological adjustment
+928,DX000928,Jet travel fatigue syndrome mild
+929,DX000929,Time zone adjustment disturbance
+930,DX000930,Temporary circadian disruption response
+931,DX000931,Sleep cycle shift adaptation issue
+932,DX000932,Day-night rhythm instability episode
+933,DX000933,Mild sleep pressure imbalance
+934,DX000934,Delayed sleep recovery response
+935,DX000935,Fragmented rest pattern episode
+936,DX000936,Reduced sleep continuity state
+937,DX000937,Non-restorative rest condition
+938,DX000938,Short sleep efficiency episode
+939,DX000939,Mild wake cycle disturbance
+940,DX000940,Daytime alertness fluctuation
+941,DX000941,Temporary alertness reduction episode
+942,DX000942,Cognitive fog transient condition
+943,DX000943,Mental clarity fluctuation syndrome
+944,DX000944,Short-term focus instability
+945,DX000945,Attention switching difficulty episode
+946,DX000946,Mental fatigue accumulation state
+947,DX000947,Information overload reaction
+948,DX000948,Processing speed reduction mild
+949,DX000949,Short-term learning inefficiency
+950,DX000950,Temporary recall difficulty episode
+951,DX000951,Memory retrieval inconsistency
+952,DX000952,Mild concentration drift condition
+953,DX000953,Cognitive saturation response
+954,DX000954,Stress-induced cognitive slowdown
+955,DX000955,Emotional reactivity increase mild
+956,DX000956,Mood variability short-term pattern
+957,DX000957,Situational emotional sensitivity
+958,DX000958,Transient irritability state
+959,DX000959,Short-term frustration response
+960,DX000960,Mild emotional exhaustion episode
+961,DX000961,Psychological load imbalance
+962,DX000962,Stress accumulation response mild
+963,DX000963,Adaptive coping strain episode
+964,DX000964,Mental workload overload condition
+965,DX000965,Short duration psychological stress
+966,DX000966,Emotional resilience dip transient
+967,DX000967,Behavioral adjustment difficulty mild
+968,DX000968,Short-term motivation reduction
+969,DX000969,Activity engagement decline episode
+970,DX000970,Reduced initiative state mild
+971,DX000971,Temporary apathy-like condition
+972,DX000972,Mild disengagement response
+973,DX000973,Social interaction fatigue episode
+974,DX000974,Communication fatigue mild state
+975,DX000975,Reduced social tolerance period
+976,DX000976,Temporary withdrawal tendency
+977,DX000977,Environmental overstimulation response
+978,DX000978,Sensory overload mild condition
+979,DX000979,Noise exposure stress reaction
+980,DX000980,Light intensity sensitivity episode
+981,DX000981,Screen exposure fatigue syndrome
+982,DX000982,Digital fatigue mild condition
+983,DX000983,Visual strain exposure response
+984,DX000984,Extended screen use discomfort
+985,DX000985,Postural fatigue syndrome mild
+986,DX000986,Sedentary behavior strain response
+987,DX000987,Prolonged sitting discomfort state
+988,DX000988,Musculoskeletal static load fatigue
+989,DX000989,Repetitive posture strain episode
+990,DX000990,Low movement activity syndrome
+991,DX000991,Physical inactivity stiffness response
+992,DX000992,Mild joint stiffness morning pattern
+993,DX000993,Temporary mobility stiffness episode
+994,DX000994,Reduced flexibility condition mild
+995,DX000995,Muscle tone imbalance transient
+996,DX000996,Localized muscular fatigue response
+997,DX000997,Generalized body stiffness episode
+998,DX000998,Mild connective tissue strain response
+999,DX000999,Minor structural load imbalance
+1000,DX001000,Postural alignment fatigue syndrome

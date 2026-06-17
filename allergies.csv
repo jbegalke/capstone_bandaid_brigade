@@ -1,0 +1,1001 @@
+allergy_id,name
+1,Peanut Protein
+2,Peanut Extract
+3,Peanut Oil
+4,Peanut Residue
+5,Peanut Component
+6,Peanut Derivative
+7,Peanut Allergen
+8,Peanut Compound
+9,Peanut Particulate
+10,Peanut Substance
+11,Tree Nut Protein
+12,Tree Nut Extract
+13,Tree Nut Oil
+14,Tree Nut Residue
+15,Tree Nut Component
+16,Tree Nut Derivative
+17,Tree Nut Allergen
+18,Tree Nut Compound
+19,Tree Nut Particulate
+20,Tree Nut Substance
+21,Milk Protein
+22,Milk Extract
+23,Milk Oil
+24,Milk Residue
+25,Milk Component
+26,Milk Derivative
+27,Milk Allergen
+28,Milk Compound
+29,Milk Particulate
+30,Milk Substance
+31,Egg Protein
+32,Egg Extract
+33,Egg Oil
+34,Egg Residue
+35,Egg Component
+36,Egg Derivative
+37,Egg Allergen
+38,Egg Compound
+39,Egg Particulate
+40,Egg Substance
+41,Shellfish Protein
+42,Shellfish Extract
+43,Shellfish Oil
+44,Shellfish Residue
+45,Shellfish Component
+46,Shellfish Derivative
+47,Shellfish Allergen
+48,Shellfish Compound
+49,Shellfish Particulate
+50,Shellfish Substance
+51,Fish Protein
+52,Fish Extract
+53,Fish Oil
+54,Fish Residue
+55,Fish Component
+56,Fish Derivative
+57,Fish Allergen
+58,Fish Compound
+59,Fish Particulate
+60,Fish Substance
+61,Soy Protein
+62,Soy Extract
+63,Soy Oil
+64,Soy Residue
+65,Soy Component
+66,Soy Derivative
+67,Soy Allergen
+68,Soy Compound
+69,Soy Particulate
+70,Soy Substance
+71,Wheat Protein
+72,Wheat Extract
+73,Wheat Oil
+74,Wheat Residue
+75,Wheat Component
+76,Wheat Derivative
+77,Wheat Allergen
+78,Wheat Compound
+79,Wheat Particulate
+80,Wheat Substance
+81,Sesame Protein
+82,Sesame Extract
+83,Sesame Oil
+84,Sesame Residue
+85,Sesame Component
+86,Sesame Derivative
+87,Sesame Allergen
+88,Sesame Compound
+89,Sesame Particulate
+90,Sesame Substance
+91,Corn Protein
+92,Corn Extract
+93,Corn Oil
+94,Corn Residue
+95,Corn Component
+96,Corn Derivative
+97,Corn Allergen
+98,Corn Compound
+99,Corn Particulate
+100,Corn Substance
+101,Latex Protein
+102,Latex Extract
+103,Latex Oil
+104,Latex Residue
+105,Latex Component
+106,Latex Derivative
+107,Latex Allergen
+108,Latex Compound
+109,Latex Particulate
+110,Latex Substance
+111,Pollen Protein
+112,Pollen Extract
+113,Pollen Oil
+114,Pollen Residue
+115,Pollen Component
+116,Pollen Derivative
+117,Pollen Allergen
+118,Pollen Compound
+119,Pollen Particulate
+120,Pollen Substance
+121,Dust Mite Protein
+122,Dust Mite Extract
+123,Dust Mite Oil
+124,Dust Mite Residue
+125,Dust Mite Component
+126,Dust Mite Derivative
+127,Dust Mite Allergen
+128,Dust Mite Compound
+129,Dust Mite Particulate
+130,Dust Mite Substance
+131,Mold Protein
+132,Mold Extract
+133,Mold Oil
+134,Mold Residue
+135,Mold Component
+136,Mold Derivative
+137,Mold Allergen
+138,Mold Compound
+139,Mold Particulate
+140,Mold Substance
+141,Pet Dander Protein
+142,Pet Dander Extract
+143,Pet Dander Oil
+144,Pet Dander Residue
+145,Pet Dander Component
+146,Pet Dander Derivative
+147,Pet Dander Allergen
+148,Pet Dander Compound
+149,Pet Dander Particulate
+150,Pet Dander Substance
+151,Insect Sting Protein
+152,Insect Sting Extract
+153,Insect Sting Oil
+154,Insect Sting Residue
+155,Insect Sting Component
+156,Insect Sting Derivative
+157,Insect Sting Allergen
+158,Insect Sting Compound
+159,Insect Sting Particulate
+160,Insect Sting Substance
+161,Medication Protein
+162,Medication Extract
+163,Medication Oil
+164,Medication Residue
+165,Medication Component
+166,Medication Derivative
+167,Medication Allergen
+168,Medication Compound
+169,Medication Particulate
+170,Medication Substance
+171,Antibiotic Protein
+172,Antibiotic Extract
+173,Antibiotic Oil
+174,Antibiotic Residue
+175,Antibiotic Component
+176,Antibiotic Derivative
+177,Antibiotic Allergen
+178,Antibiotic Compound
+179,Antibiotic Particulate
+180,Antibiotic Substance
+181,NSAID Protein
+182,NSAID Extract
+183,NSAID Oil
+184,NSAID Residue
+185,NSAID Component
+186,NSAID Derivative
+187,NSAID Allergen
+188,NSAID Compound
+189,NSAID Particulate
+190,NSAID Substance
+191,Fragrance Protein
+192,Fragrance Extract
+193,Fragrance Oil
+194,Fragrance Residue
+195,Fragrance Component
+196,Fragrance Derivative
+197,Fragrance Allergen
+198,Fragrance Compound
+199,Fragrance Particulate
+200,Fragrance Substance
+201,Tree Nut Variant 1
+202,Milk Variant 2
+203,Egg Variant 3
+204,Shellfish Variant 4
+205,Fish Variant 5
+206,Soy Variant 6
+207,Wheat Variant 7
+208,Sesame Variant 8
+209,Corn Variant 9
+210,Latex Variant 10
+211,Pollen Variant 11
+212,Dust Mite Variant 12
+213,Mold Variant 13
+214,Pet Dander Variant 14
+215,Insect Sting Variant 15
+216,Medication Variant 16
+217,Antibiotic Variant 17
+218,NSAID Variant 18
+219,Fragrance Variant 19
+220,Peanut Variant 20
+221,Tree Nut Variant 21
+222,Milk Variant 22
+223,Egg Variant 23
+224,Shellfish Variant 24
+225,Fish Variant 25
+226,Soy Variant 26
+227,Wheat Variant 27
+228,Sesame Variant 28
+229,Corn Variant 29
+230,Latex Variant 30
+231,Pollen Variant 31
+232,Dust Mite Variant 32
+233,Mold Variant 33
+234,Pet Dander Variant 34
+235,Insect Sting Variant 35
+236,Medication Variant 36
+237,Antibiotic Variant 37
+238,NSAID Variant 38
+239,Fragrance Variant 39
+240,Peanut Variant 40
+241,Tree Nut Variant 41
+242,Milk Variant 42
+243,Egg Variant 43
+244,Shellfish Variant 44
+245,Fish Variant 45
+246,Soy Variant 46
+247,Wheat Variant 47
+248,Sesame Variant 48
+249,Corn Variant 49
+250,Latex Variant 50
+251,Pollen Variant 51
+252,Dust Mite Variant 52
+253,Mold Variant 53
+254,Pet Dander Variant 54
+255,Insect Sting Variant 55
+256,Medication Variant 56
+257,Antibiotic Variant 57
+258,NSAID Variant 58
+259,Fragrance Variant 59
+260,Peanut Variant 60
+261,Tree Nut Variant 61
+262,Milk Variant 62
+263,Egg Variant 63
+264,Shellfish Variant 64
+265,Fish Variant 65
+266,Soy Variant 66
+267,Wheat Variant 67
+268,Sesame Variant 68
+269,Corn Variant 69
+270,Latex Variant 70
+271,Pollen Variant 71
+272,Dust Mite Variant 72
+273,Mold Variant 73
+274,Pet Dander Variant 74
+275,Insect Sting Variant 75
+276,Medication Variant 76
+277,Antibiotic Variant 77
+278,NSAID Variant 78
+279,Fragrance Variant 79
+280,Peanut Variant 80
+281,Tree Nut Variant 81
+282,Milk Variant 82
+283,Egg Variant 83
+284,Shellfish Variant 84
+285,Fish Variant 85
+286,Soy Variant 86
+287,Wheat Variant 87
+288,Sesame Variant 88
+289,Corn Variant 89
+290,Latex Variant 90
+291,Pollen Variant 91
+292,Dust Mite Variant 92
+293,Mold Variant 93
+294,Pet Dander Variant 94
+295,Insect Sting Variant 95
+296,Medication Variant 96
+297,Antibiotic Variant 97
+298,NSAID Variant 98
+299,Fragrance Variant 99
+300,Peanut Variant 100
+301,Tree Nut Variant 101
+302,Milk Variant 102
+303,Egg Variant 103
+304,Shellfish Variant 104
+305,Fish Variant 105
+306,Soy Variant 106
+307,Wheat Variant 107
+308,Sesame Variant 108
+309,Corn Variant 109
+310,Latex Variant 110
+311,Pollen Variant 111
+312,Dust Mite Variant 112
+313,Mold Variant 113
+314,Pet Dander Variant 114
+315,Insect Sting Variant 115
+316,Medication Variant 116
+317,Antibiotic Variant 117
+318,NSAID Variant 118
+319,Fragrance Variant 119
+320,Peanut Variant 120
+321,Tree Nut Variant 121
+322,Milk Variant 122
+323,Egg Variant 123
+324,Shellfish Variant 124
+325,Fish Variant 125
+326,Soy Variant 126
+327,Wheat Variant 127
+328,Sesame Variant 128
+329,Corn Variant 129
+330,Latex Variant 130
+331,Pollen Variant 131
+332,Dust Mite Variant 132
+333,Mold Variant 133
+334,Pet Dander Variant 134
+335,Insect Sting Variant 135
+336,Medication Variant 136
+337,Antibiotic Variant 137
+338,NSAID Variant 138
+339,Fragrance Variant 139
+340,Peanut Variant 140
+341,Tree Nut Variant 141
+342,Milk Variant 142
+343,Egg Variant 143
+344,Shellfish Variant 144
+345,Fish Variant 145
+346,Soy Variant 146
+347,Wheat Variant 147
+348,Sesame Variant 148
+349,Corn Variant 149
+350,Latex Variant 150
+351,Pollen Variant 151
+352,Dust Mite Variant 152
+353,Mold Variant 153
+354,Pet Dander Variant 154
+355,Insect Sting Variant 155
+356,Medication Variant 156
+357,Antibiotic Variant 157
+358,NSAID Variant 158
+359,Fragrance Variant 159
+360,Peanut Variant 160
+361,Tree Nut Variant 161
+362,Milk Variant 162
+363,Egg Variant 163
+364,Shellfish Variant 164
+365,Fish Variant 165
+366,Soy Variant 166
+367,Wheat Variant 167
+368,Sesame Variant 168
+369,Corn Variant 169
+370,Latex Variant 170
+371,Pollen Variant 171
+372,Dust Mite Variant 172
+373,Mold Variant 173
+374,Pet Dander Variant 174
+375,Insect Sting Variant 175
+376,Medication Variant 176
+377,Antibiotic Variant 177
+378,NSAID Variant 178
+379,Fragrance Variant 179
+380,Peanut Variant 180
+381,Tree Nut Variant 181
+382,Milk Variant 182
+383,Egg Variant 183
+384,Shellfish Variant 184
+385,Fish Variant 185
+386,Soy Variant 186
+387,Wheat Variant 187
+388,Sesame Variant 188
+389,Corn Variant 189
+390,Latex Variant 190
+391,Pollen Variant 191
+392,Dust Mite Variant 192
+393,Mold Variant 193
+394,Pet Dander Variant 194
+395,Insect Sting Variant 195
+396,Medication Variant 196
+397,Antibiotic Variant 197
+398,NSAID Variant 198
+399,Fragrance Variant 199
+400,Peanut Variant 200
+401,Tree Nut Variant 201
+402,Milk Variant 202
+403,Egg Variant 203
+404,Shellfish Variant 204
+405,Fish Variant 205
+406,Soy Variant 206
+407,Wheat Variant 207
+408,Sesame Variant 208
+409,Corn Variant 209
+410,Latex Variant 210
+411,Pollen Variant 211
+412,Dust Mite Variant 212
+413,Mold Variant 213
+414,Pet Dander Variant 214
+415,Insect Sting Variant 215
+416,Medication Variant 216
+417,Antibiotic Variant 217
+418,NSAID Variant 218
+419,Fragrance Variant 219
+420,Peanut Variant 220
+421,Tree Nut Variant 221
+422,Milk Variant 222
+423,Egg Variant 223
+424,Shellfish Variant 224
+425,Fish Variant 225
+426,Soy Variant 226
+427,Wheat Variant 227
+428,Sesame Variant 228
+429,Corn Variant 229
+430,Latex Variant 230
+431,Pollen Variant 231
+432,Dust Mite Variant 232
+433,Mold Variant 233
+434,Pet Dander Variant 234
+435,Insect Sting Variant 235
+436,Medication Variant 236
+437,Antibiotic Variant 237
+438,NSAID Variant 238
+439,Fragrance Variant 239
+440,Peanut Variant 240
+441,Tree Nut Variant 241
+442,Milk Variant 242
+443,Egg Variant 243
+444,Shellfish Variant 244
+445,Fish Variant 245
+446,Soy Variant 246
+447,Wheat Variant 247
+448,Sesame Variant 248
+449,Corn Variant 249
+450,Latex Variant 250
+451,Pollen Variant 251
+452,Dust Mite Variant 252
+453,Mold Variant 253
+454,Pet Dander Variant 254
+455,Insect Sting Variant 255
+456,Medication Variant 256
+457,Antibiotic Variant 257
+458,NSAID Variant 258
+459,Fragrance Variant 259
+460,Peanut Variant 260
+461,Tree Nut Variant 261
+462,Milk Variant 262
+463,Egg Variant 263
+464,Shellfish Variant 264
+465,Fish Variant 265
+466,Soy Variant 266
+467,Wheat Variant 267
+468,Sesame Variant 268
+469,Corn Variant 269
+470,Latex Variant 270
+471,Pollen Variant 271
+472,Dust Mite Variant 272
+473,Mold Variant 273
+474,Pet Dander Variant 274
+475,Insect Sting Variant 275
+476,Medication Variant 276
+477,Antibiotic Variant 277
+478,NSAID Variant 278
+479,Fragrance Variant 279
+480,Peanut Variant 280
+481,Tree Nut Variant 281
+482,Milk Variant 282
+483,Egg Variant 283
+484,Shellfish Variant 284
+485,Fish Variant 285
+486,Soy Variant 286
+487,Wheat Variant 287
+488,Sesame Variant 288
+489,Corn Variant 289
+490,Latex Variant 290
+491,Pollen Variant 291
+492,Dust Mite Variant 292
+493,Mold Variant 293
+494,Pet Dander Variant 294
+495,Insect Sting Variant 295
+496,Medication Variant 296
+497,Antibiotic Variant 297
+498,NSAID Variant 298
+499,Fragrance Variant 299
+500,Peanut Variant 300
+501,Tree Nut Variant 301
+502,Milk Variant 302
+503,Egg Variant 303
+504,Shellfish Variant 304
+505,Fish Variant 305
+506,Soy Variant 306
+507,Wheat Variant 307
+508,Sesame Variant 308
+509,Corn Variant 309
+510,Latex Variant 310
+511,Pollen Variant 311
+512,Dust Mite Variant 312
+513,Mold Variant 313
+514,Pet Dander Variant 314
+515,Insect Sting Variant 315
+516,Medication Variant 316
+517,Antibiotic Variant 317
+518,NSAID Variant 318
+519,Fragrance Variant 319
+520,Peanut Variant 320
+521,Tree Nut Variant 321
+522,Milk Variant 322
+523,Egg Variant 323
+524,Shellfish Variant 324
+525,Fish Variant 325
+526,Soy Variant 326
+527,Wheat Variant 327
+528,Sesame Variant 328
+529,Corn Variant 329
+530,Latex Variant 330
+531,Pollen Variant 331
+532,Dust Mite Variant 332
+533,Mold Variant 333
+534,Pet Dander Variant 334
+535,Insect Sting Variant 335
+536,Medication Variant 336
+537,Antibiotic Variant 337
+538,NSAID Variant 338
+539,Fragrance Variant 339
+540,Peanut Variant 340
+541,Tree Nut Variant 341
+542,Milk Variant 342
+543,Egg Variant 343
+544,Shellfish Variant 344
+545,Fish Variant 345
+546,Soy Variant 346
+547,Wheat Variant 347
+548,Sesame Variant 348
+549,Corn Variant 349
+550,Latex Variant 350
+551,Pollen Variant 351
+552,Dust Mite Variant 352
+553,Mold Variant 353
+554,Pet Dander Variant 354
+555,Insect Sting Variant 355
+556,Medication Variant 356
+557,Antibiotic Variant 357
+558,NSAID Variant 358
+559,Fragrance Variant 359
+560,Peanut Variant 360
+561,Tree Nut Variant 361
+562,Milk Variant 362
+563,Egg Variant 363
+564,Shellfish Variant 364
+565,Fish Variant 365
+566,Soy Variant 366
+567,Wheat Variant 367
+568,Sesame Variant 368
+569,Corn Variant 369
+570,Latex Variant 370
+571,Pollen Variant 371
+572,Dust Mite Variant 372
+573,Mold Variant 373
+574,Pet Dander Variant 374
+575,Insect Sting Variant 375
+576,Medication Variant 376
+577,Antibiotic Variant 377
+578,NSAID Variant 378
+579,Fragrance Variant 379
+580,Peanut Variant 380
+581,Tree Nut Variant 381
+582,Milk Variant 382
+583,Egg Variant 383
+584,Shellfish Variant 384
+585,Fish Variant 385
+586,Soy Variant 386
+587,Wheat Variant 387
+588,Sesame Variant 388
+589,Corn Variant 389
+590,Latex Variant 390
+591,Pollen Variant 391
+592,Dust Mite Variant 392
+593,Mold Variant 393
+594,Pet Dander Variant 394
+595,Insect Sting Variant 395
+596,Medication Variant 396
+597,Antibiotic Variant 397
+598,NSAID Variant 398
+599,Fragrance Variant 399
+600,Peanut Variant 400
+601,Tree Nut Variant 401
+602,Milk Variant 402
+603,Egg Variant 403
+604,Shellfish Variant 404
+605,Fish Variant 405
+606,Soy Variant 406
+607,Wheat Variant 407
+608,Sesame Variant 408
+609,Corn Variant 409
+610,Latex Variant 410
+611,Pollen Variant 411
+612,Dust Mite Variant 412
+613,Mold Variant 413
+614,Pet Dander Variant 414
+615,Insect Sting Variant 415
+616,Medication Variant 416
+617,Antibiotic Variant 417
+618,NSAID Variant 418
+619,Fragrance Variant 419
+620,Peanut Variant 420
+621,Tree Nut Variant 421
+622,Milk Variant 422
+623,Egg Variant 423
+624,Shellfish Variant 424
+625,Fish Variant 425
+626,Soy Variant 426
+627,Wheat Variant 427
+628,Sesame Variant 428
+629,Corn Variant 429
+630,Latex Variant 430
+631,Pollen Variant 431
+632,Dust Mite Variant 432
+633,Mold Variant 433
+634,Pet Dander Variant 434
+635,Insect Sting Variant 435
+636,Medication Variant 436
+637,Antibiotic Variant 437
+638,NSAID Variant 438
+639,Fragrance Variant 439
+640,Peanut Variant 440
+641,Tree Nut Variant 441
+642,Milk Variant 442
+643,Egg Variant 443
+644,Shellfish Variant 444
+645,Fish Variant 445
+646,Soy Variant 446
+647,Wheat Variant 447
+648,Sesame Variant 448
+649,Corn Variant 449
+650,Latex Variant 450
+651,Pollen Variant 451
+652,Dust Mite Variant 452
+653,Mold Variant 453
+654,Pet Dander Variant 454
+655,Insect Sting Variant 455
+656,Medication Variant 456
+657,Antibiotic Variant 457
+658,NSAID Variant 458
+659,Fragrance Variant 459
+660,Peanut Variant 460
+661,Tree Nut Variant 461
+662,Milk Variant 462
+663,Egg Variant 463
+664,Shellfish Variant 464
+665,Fish Variant 465
+666,Soy Variant 466
+667,Wheat Variant 467
+668,Sesame Variant 468
+669,Corn Variant 469
+670,Latex Variant 470
+671,Pollen Variant 471
+672,Dust Mite Variant 472
+673,Mold Variant 473
+674,Pet Dander Variant 474
+675,Insect Sting Variant 475
+676,Medication Variant 476
+677,Antibiotic Variant 477
+678,NSAID Variant 478
+679,Fragrance Variant 479
+680,Peanut Variant 480
+681,Tree Nut Variant 481
+682,Milk Variant 482
+683,Egg Variant 483
+684,Shellfish Variant 484
+685,Fish Variant 485
+686,Soy Variant 486
+687,Wheat Variant 487
+688,Sesame Variant 488
+689,Corn Variant 489
+690,Latex Variant 490
+691,Pollen Variant 491
+692,Dust Mite Variant 492
+693,Mold Variant 493
+694,Pet Dander Variant 494
+695,Insect Sting Variant 495
+696,Medication Variant 496
+697,Antibiotic Variant 497
+698,NSAID Variant 498
+699,Fragrance Variant 499
+700,Peanut Variant 500
+701,Tree Nut Variant 501
+702,Milk Variant 502
+703,Egg Variant 503
+704,Shellfish Variant 504
+705,Fish Variant 505
+706,Soy Variant 506
+707,Wheat Variant 507
+708,Sesame Variant 508
+709,Corn Variant 509
+710,Latex Variant 510
+711,Pollen Variant 511
+712,Dust Mite Variant 512
+713,Mold Variant 513
+714,Pet Dander Variant 514
+715,Insect Sting Variant 515
+716,Medication Variant 516
+717,Antibiotic Variant 517
+718,NSAID Variant 518
+719,Fragrance Variant 519
+720,Peanut Variant 520
+721,Tree Nut Variant 521
+722,Milk Variant 522
+723,Egg Variant 523
+724,Shellfish Variant 524
+725,Fish Variant 525
+726,Soy Variant 526
+727,Wheat Variant 527
+728,Sesame Variant 528
+729,Corn Variant 529
+730,Latex Variant 530
+731,Pollen Variant 531
+732,Dust Mite Variant 532
+733,Mold Variant 533
+734,Pet Dander Variant 534
+735,Insect Sting Variant 535
+736,Medication Variant 536
+737,Antibiotic Variant 537
+738,NSAID Variant 538
+739,Fragrance Variant 539
+740,Peanut Variant 540
+741,Tree Nut Variant 541
+742,Milk Variant 542
+743,Egg Variant 543
+744,Shellfish Variant 544
+745,Fish Variant 545
+746,Soy Variant 546
+747,Wheat Variant 547
+748,Sesame Variant 548
+749,Corn Variant 549
+750,Latex Variant 550
+751,Pollen Variant 551
+752,Dust Mite Variant 552
+753,Mold Variant 553
+754,Pet Dander Variant 554
+755,Insect Sting Variant 555
+756,Medication Variant 556
+757,Antibiotic Variant 557
+758,NSAID Variant 558
+759,Fragrance Variant 559
+760,Peanut Variant 560
+761,Tree Nut Variant 561
+762,Milk Variant 562
+763,Egg Variant 563
+764,Shellfish Variant 564
+765,Fish Variant 565
+766,Soy Variant 566
+767,Wheat Variant 567
+768,Sesame Variant 568
+769,Corn Variant 569
+770,Latex Variant 570
+771,Pollen Variant 571
+772,Dust Mite Variant 572
+773,Mold Variant 573
+774,Pet Dander Variant 574
+775,Insect Sting Variant 575
+776,Medication Variant 576
+777,Antibiotic Variant 577
+778,NSAID Variant 578
+779,Fragrance Variant 579
+780,Peanut Variant 580
+781,Tree Nut Variant 581
+782,Milk Variant 582
+783,Egg Variant 583
+784,Shellfish Variant 584
+785,Fish Variant 585
+786,Soy Variant 586
+787,Wheat Variant 587
+788,Sesame Variant 588
+789,Corn Variant 589
+790,Latex Variant 590
+791,Pollen Variant 591
+792,Dust Mite Variant 592
+793,Mold Variant 593
+794,Pet Dander Variant 594
+795,Insect Sting Variant 595
+796,Medication Variant 596
+797,Antibiotic Variant 597
+798,NSAID Variant 598
+799,Fragrance Variant 599
+800,Peanut Variant 600
+801,Tree Nut Variant 601
+802,Milk Variant 602
+803,Egg Variant 603
+804,Shellfish Variant 604
+805,Fish Variant 605
+806,Soy Variant 606
+807,Wheat Variant 607
+808,Sesame Variant 608
+809,Corn Variant 609
+810,Latex Variant 610
+811,Pollen Variant 611
+812,Dust Mite Variant 612
+813,Mold Variant 613
+814,Pet Dander Variant 614
+815,Insect Sting Variant 615
+816,Medication Variant 616
+817,Antibiotic Variant 617
+818,NSAID Variant 618
+819,Fragrance Variant 619
+820,Peanut Variant 620
+821,Tree Nut Variant 621
+822,Milk Variant 622
+823,Egg Variant 623
+824,Shellfish Variant 624
+825,Fish Variant 625
+826,Soy Variant 626
+827,Wheat Variant 627
+828,Sesame Variant 628
+829,Corn Variant 629
+830,Latex Variant 630
+831,Pollen Variant 631
+832,Dust Mite Variant 632
+833,Mold Variant 633
+834,Pet Dander Variant 634
+835,Insect Sting Variant 635
+836,Medication Variant 636
+837,Antibiotic Variant 637
+838,NSAID Variant 638
+839,Fragrance Variant 639
+840,Peanut Variant 640
+841,Tree Nut Variant 641
+842,Milk Variant 642
+843,Egg Variant 643
+844,Shellfish Variant 644
+845,Fish Variant 645
+846,Soy Variant 646
+847,Wheat Variant 647
+848,Sesame Variant 648
+849,Corn Variant 649
+850,Latex Variant 650
+851,Pollen Variant 651
+852,Dust Mite Variant 652
+853,Mold Variant 653
+854,Pet Dander Variant 654
+855,Insect Sting Variant 655
+856,Medication Variant 656
+857,Antibiotic Variant 657
+858,NSAID Variant 658
+859,Fragrance Variant 659
+860,Peanut Variant 660
+861,Tree Nut Variant 661
+862,Milk Variant 662
+863,Egg Variant 663
+864,Shellfish Variant 664
+865,Fish Variant 665
+866,Soy Variant 666
+867,Wheat Variant 667
+868,Sesame Variant 668
+869,Corn Variant 669
+870,Latex Variant 670
+871,Pollen Variant 671
+872,Dust Mite Variant 672
+873,Mold Variant 673
+874,Pet Dander Variant 674
+875,Insect Sting Variant 675
+876,Medication Variant 676
+877,Antibiotic Variant 677
+878,NSAID Variant 678
+879,Fragrance Variant 679
+880,Peanut Variant 680
+881,Tree Nut Variant 681
+882,Milk Variant 682
+883,Egg Variant 683
+884,Shellfish Variant 684
+885,Fish Variant 685
+886,Soy Variant 686
+887,Wheat Variant 687
+888,Sesame Variant 688
+889,Corn Variant 689
+890,Latex Variant 690
+891,Pollen Variant 691
+892,Dust Mite Variant 692
+893,Mold Variant 693
+894,Pet Dander Variant 694
+895,Insect Sting Variant 695
+896,Medication Variant 696
+897,Antibiotic Variant 697
+898,NSAID Variant 698
+899,Fragrance Variant 699
+900,Peanut Variant 700
+901,Tree Nut Variant 701
+902,Milk Variant 702
+903,Egg Variant 703
+904,Shellfish Variant 704
+905,Fish Variant 705
+906,Soy Variant 706
+907,Wheat Variant 707
+908,Sesame Variant 708
+909,Corn Variant 709
+910,Latex Variant 710
+911,Pollen Variant 711
+912,Dust Mite Variant 712
+913,Mold Variant 713
+914,Pet Dander Variant 714
+915,Insect Sting Variant 715
+916,Medication Variant 716
+917,Antibiotic Variant 717
+918,NSAID Variant 718
+919,Fragrance Variant 719
+920,Peanut Variant 720
+921,Tree Nut Variant 721
+922,Milk Variant 722
+923,Egg Variant 723
+924,Shellfish Variant 724
+925,Fish Variant 725
+926,Soy Variant 726
+927,Wheat Variant 727
+928,Sesame Variant 728
+929,Corn Variant 729
+930,Latex Variant 730
+931,Pollen Variant 731
+932,Dust Mite Variant 732
+933,Mold Variant 733
+934,Pet Dander Variant 734
+935,Insect Sting Variant 735
+936,Medication Variant 736
+937,Antibiotic Variant 737
+938,NSAID Variant 738
+939,Fragrance Variant 739
+940,Peanut Variant 740
+941,Tree Nut Variant 741
+942,Milk Variant 742
+943,Egg Variant 743
+944,Shellfish Variant 744
+945,Fish Variant 745
+946,Soy Variant 746
+947,Wheat Variant 747
+948,Sesame Variant 748
+949,Corn Variant 749
+950,Latex Variant 750
+951,Pollen Variant 751
+952,Dust Mite Variant 752
+953,Mold Variant 753
+954,Pet Dander Variant 754
+955,Insect Sting Variant 755
+956,Medication Variant 756
+957,Antibiotic Variant 757
+958,NSAID Variant 758
+959,Fragrance Variant 759
+960,Peanut Variant 760
+961,Tree Nut Variant 761
+962,Milk Variant 762
+963,Egg Variant 763
+964,Shellfish Variant 764
+965,Fish Variant 765
+966,Soy Variant 766
+967,Wheat Variant 767
+968,Sesame Variant 768
+969,Corn Variant 769
+970,Latex Variant 770
+971,Pollen Variant 771
+972,Dust Mite Variant 772
+973,Mold Variant 773
+974,Pet Dander Variant 774
+975,Insect Sting Variant 775
+976,Medication Variant 776
+977,Antibiotic Variant 777
+978,NSAID Variant 778
+979,Fragrance Variant 779
+980,Peanut Variant 780
+981,Tree Nut Variant 781
+982,Milk Variant 782
+983,Egg Variant 783
+984,Shellfish Variant 784
+985,Fish Variant 785
+986,Soy Variant 786
+987,Wheat Variant 787
+988,Sesame Variant 788
+989,Corn Variant 789
+990,Latex Variant 790
+991,Pollen Variant 791
+992,Dust Mite Variant 792
+993,Mold Variant 793
+994,Pet Dander Variant 794
+995,Insect Sting Variant 795
+996,Medication Variant 796
+997,Antibiotic Variant 797
+998,NSAID Variant 798
+999,Fragrance Variant 799
+1000,Peanut Variant 800
