@@ -250,6 +250,14 @@ CREATE TABLE IF NOT EXISTS doctor_schedules (
     shift_start DATETIME,
     shift_length_mins SMALLINT
 );
+LOAD DATA
+INFILE 'C:\\_data\\capstone_bandaid_brigade\\doctor_schedules.csv'
+INTO TABLE doctor_schedules
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(licence_id, shift_start, shift_length_mins);
 
 -- LAYER 3 BEGIN
 DROP TABLE IF EXISTS fee_schedule_billing_records;
