@@ -17,7 +17,7 @@ CREATE TABLE patients (
     email_address VARCHAR(30)
 );
 
-LOAD DATA INFILE 'C:\\_data\\_imports\\patients.csv' INTO
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\patients.csv' INTO
 TABLE patients FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
     PHIN_id,
     first_name,
@@ -35,7 +35,7 @@ CREATE TABLE allergies (
 );
 
 -- TODO: fix this
-LOAD DATA INFILE 'C:\\_data\\_imports\\allergies.csv' INTO
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\allergies.csv' INTO
 TABLE allergies FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (allergy_id, name)
 
 DROP TABLE IF EXISTS insurance_providers;
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS insurance_providers (
     phone_number VARCHAR(20)
 );
 
-LOAD DATA INFILE 'C:\\_data\\_imports\\insurance_providers.csv' INTO
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\insurance_providers.csv' INTO
 TABLE insurance_providers FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
     insurance_provider_id,
     company_name,
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS diagnoses (
     name VARCHAR(255)
 );
 
-LOAD DATA INFILE 'C:\\_data\\_imports\\diagnoses.csv' INTO
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\diagnoses.csv' INTO
 TABLE diagnoses FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
     diagnosis_id,
     diagnosis_code,
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS medical_specialties (
     responsibilities TEXT
 );
 
-LOAD DATA INFILE 'C:\\_data\\_imports\\medical_specialties.csv' INTO
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\medical_specialties.csv' INTO
 TABLE medical_specialties FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
     name,
     responsibilities
@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS fee_schedules (
     consultation_cost DECIMAL(10, 2)
 );
 
-LOAD DATA INFILE 'C:\\_data\\_imports\\fee_schedules.csv' INTO
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\fee_schedules.csv' INTO
 TABLE fee_schedules FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
     fee_schedule_id,
     duration,
@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS doctors (
     medical_specialty_id INT REFERENCES medical_specialties(medical_specialty_id)
 );
 
-LOAD DATA INFILE 'C:\\_data\\_imports\\doctors.csv' INTO
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\doctors.csv' INTO
 TABLE doctors FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
     licence_id,
     first_name,
@@ -150,7 +150,7 @@ UPDATE patients
 SET rand_index = RAND()
 WHERE TRUE;
 
-LOAD DATA INFILE 'C:\\_data\\_imports\\appointments.csv' INTO
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\appointments.csv' INTO
 TABLE appointments FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
     appointment_id,
     start_date,
@@ -195,7 +195,7 @@ CREATE TABLE IF NOT EXISTS billing_records (
 );
 
 -- TODO: Add 20k more records to match the appointments table count
-LOAD DATA INFILE 'C:\\_data\\_imports\\billing_records.csv' INTO
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\billing_records.csv' INTO
 TABLE billing_records FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
     billing_record_id,
     appointment_id,
@@ -255,7 +255,7 @@ CREATE TABLE IF NOT EXISTS prescriptions (
 -- TODO: Fix prescription data to match
 -- the id values in the doctor_appointments table
 -- ... after that table has data. 
--- LOAD DATA INFILE 'C:\\_data\\_imports\\prescriptions.csv' INTO
+-- LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\prescriptions.csv' INTO
 -- TABLE prescriptions FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
 --     drug_name,
 --     dosage,
