@@ -137,6 +137,7 @@ CREATE TABLE IF NOT EXISTS appointments (
     appointment_type VARCHAR(50),
     reason VARCHAR(100),
     notice TEXT,
+    cancel_minutes_before INT,
     PHIN_id INT,
     FOREIGN KEY (PHIN_id) REFERENCES patients (PHIN_id)
 );
@@ -160,7 +161,8 @@ TABLE appointments FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TER
     status,
     appointment_type,
     reason,
-    notice
+    notice,
+    cancel_minutes_before
 );
 
 UPDATE appointments
