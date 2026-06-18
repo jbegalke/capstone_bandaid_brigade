@@ -212,13 +212,19 @@ TABLE billing_records FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES 
     payment_type
 );
 
-CREATE TABLE IF NOT EXISTS doctor_appointments (
+CREATE TABLE IF NOT EXISTS doctor_appointment (
     doctor_appointment_id INT AUTO_INCREMENT PRIMARY KEY,
     licence_id CHAR(19) REFERENCES doctors (licence_id),
     appointment_id INT,
     FOREIGN KEY (appointment_id) REFERENCES appointments (appointment_id)
 );
 
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\doctor_appointment.csv' 
+INTO TABLE doctor_appointment FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
+    doctor_appointment_id,
+    licence_id,
+    appointment_id
+);
 -- Todo: get doctor appointments data. 
 
 DROP TABLE IF EXISTS doctor_schedules;
@@ -280,3 +286,22 @@ CREATE TABLE IF NOT EXISTS appointment_diagnoses (
     FOREIGN KEY (diagnosis_id) REFERENCES diagnoses (diagnosis_id),
     FOREIGN KEY (doctor_appointment_id) REFERENCES doctor_appointments (doctor_appointment_id)
 );
+
+-- Jenn Queries 
+
+-- Count the number of times that the patient “Amelia S Choi” has cancelled an appointment with less than 24 hours notice 
+-- (cancelled an appointment less than 24 hours before the appointment was due to occur). 
+
+SELECT status, first_name, last_name, cancel_minutes_before
+FROM appointments a
+JOIN patients p ON a.PHIN_id = p.PHIN_id
+WHERE last_name = 'choi'
+    AND first_name = 'Amelia S'
+    AND a.cancel_minutes_before <= 1400
+GROUP BY a.status
+
+
+
+
+
+-- Which 5 medications are most prescribed for “Type 2 Diabetes” diagnoses?
