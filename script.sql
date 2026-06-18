@@ -36,7 +36,9 @@ CREATE TABLE allergies (
 
 -- TODO: fix this
 LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\allergies.csv' INTO
-TABLE allergies FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (allergy_id, name)
+TABLE allergies FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (allergy_id, name);
+
+
 
 DROP TABLE IF EXISTS insurance_providers;
 
@@ -109,6 +111,19 @@ CREATE TABLE patient_allergies (
     FOREIGN KEY (PHIN_id) REFERENCES patients (PHIN_id),
     FOREIGN KEY (allergy_id) REFERENCES allergies (allergy_id)
 );
+
+
+
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\patient_allergies.csv'
+IGNORE
+INTO TABLE patient_allergies
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(PHIN_id, allergy_id);
+
+
 
 DROP TABLE IF EXISTS doctors;
 
