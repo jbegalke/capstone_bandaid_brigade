@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS medical_specialties (
 );
 
 LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\medical_specialties.csv' INTO
-TABLE medical_specialties FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
+TABLE medical_specialties FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES (
     name,
     responsibilities
 );
@@ -126,6 +126,8 @@ TABLE doctors FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINAT
     last_name,
     medical_specialty_id
 );
+
+SELECT * FROM medical_specialties
 
 CREATE TABLE IF NOT EXISTS appointments (
     appointment_id INT AUTO_INCREMENT PRIMARY KEY,
