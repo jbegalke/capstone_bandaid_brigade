@@ -195,7 +195,7 @@ CREATE TABLE IF NOT EXISTS billing_records (
 );
 
 -- TODO: Add 20k more records to match the appointments table count
-LOAD DATA INFILE 'C:\\_data\\_imports\\billing_records.csv' INTO
+LOAD DATA INFILE 'C:\\_data\\_imports\\billing_records2.csv' INTO
 TABLE billing_records FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
     billing_record_id,
     appointment_id,
