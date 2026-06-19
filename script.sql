@@ -311,3 +311,37 @@ WHERE p.`PHIN_id` = 102193780
     
 SELECT * FROM patients
 WHERE `PHIN_id` = 102193780
+
+-- Q3. MINA - Sort the doctors by the 
+-- number of prescriptions of the drug “Amoxicillin” they’ve given to patients.
+-- doctor TABLE
+-- prescription table 
+-- patients TABLE
+-- where = dug.name = "Amoxicillin"
+-- order BY
+
+SELECT d.first_name, d.last_name, prescription_id
+FROM doctors d
+JOIN doctor_appointments da ON d.licence_id = da.licence_id
+JOIN prescriptions p ON da.appointment_id = p.doctor_appointment_id
+WHERE p.drug_name = "Amoxicillin"
+GROUP BY d.first_name, d.last_name
+HAVING COUNT(prescription_id)
+ORDER BY prescription_id DESC
+
+-- SELECT p.prescription_id, d.first_name, d.last_name
+-- FROM doctors d
+-- JOIN doctor_appointments da ON d.licence_id = da.licence_id
+-- JOIN prescriptions p ON da.appointment_id = p.doctor_appointment_id
+-- WHERE d.licence_id = 'H551-BNMK-442T-222G'
+
+
+-- Define tables FROM - patient table, appointment  table 
+-- connections
+-- JOIN patients and appointment 
+-- filter WHERE x = cancelled 
+-- GROUP BY status
+-- HAVING
+-- ORDER BY desc
+-- LIMIT - (24 hrs in minutes is 1440) less than 1440
+-- SELECT
