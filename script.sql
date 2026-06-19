@@ -1,3 +1,4 @@
+-- Active: 1778606967613@@127.0.0.1@3306@rrc_clinic
 DROP DATABASE IF EXISTS rrc_clinic;
 
 CREATE DATABASE IF NOT EXISTS rrc_clinic;
@@ -345,3 +346,12 @@ ORDER BY prescription_id DESC
 -- ORDER BY desc
 -- LIMIT - (24 hrs in minutes is 1440) less than 1440
 -- SELECT
+
+--Q4: Find the most expensive appointment.
+
+SELECT br.total_fee, a.appointment_id
+FROM appointments a
+JOIN billing_records br
+    ON a.appointment_id = br.appointment_id
+ORDER BY total_fee DESC
+LIMIT 1
