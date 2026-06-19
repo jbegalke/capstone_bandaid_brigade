@@ -287,3 +287,27 @@ CREATE TABLE IF NOT EXISTS appointment_diagnoses (
     FOREIGN KEY (diagnosis_id) REFERENCES diagnoses (diagnosis_id),
     FOREIGN KEY (doctor_appointment_id) REFERENCES doctor_appointments (doctor_appointment_id)
 );
+-- Query Challenges
+-- Q2. Count the number of times that the patient “Sofia Q Singh - 102193780” has cancelled an appointment with less than 24 hours notice 
+-- (cancelled an appointment less than 24 hours before the appointment was due to occur).
+ 
+-- Define tables FROM - patient table, appointment  table 
+-- connections
+-- JOIN patients and appointment 
+-- filter WHERE x = cancelled 
+-- GROUP BY status
+-- HAVING
+-- ORDER BY desc
+-- LIMIT - (24 hrs in minutes is 1440) less than 1440
+-- SELECT
+
+SELECT first_name, last_name, cancel_minutes_before, status
+FROM patients p
+JOIN appointments a ON p.PHIN_id = a.PHIN_id
+WHERE p.`PHIN_id` = 102193780
+
+
+
+    
+SELECT * FROM patients
+WHERE `PHIN_id` = 102193780
