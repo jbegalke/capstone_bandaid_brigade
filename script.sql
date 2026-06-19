@@ -36,9 +36,7 @@ CREATE TABLE allergies (
 
 -- TODO: fix this
 LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\allergies.csv' INTO
-TABLE allergies FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (allergy_id, name);
-
-
+TABLE allergies FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (allergy_id, name)
 
 DROP TABLE IF EXISTS insurance_providers;
 
@@ -111,19 +109,6 @@ CREATE TABLE patient_allergies (
     FOREIGN KEY (PHIN_id) REFERENCES patients (PHIN_id),
     FOREIGN KEY (allergy_id) REFERENCES allergies (allergy_id)
 );
-
-
-
-LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\patient_allergies.csv'
-IGNORE
-INTO TABLE patient_allergies
-FIELDS TERMINATED BY ','
-OPTIONALLY ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES
-(PHIN_id, allergy_id);
-
-
 
 DROP TABLE IF EXISTS doctors;
 
@@ -213,7 +198,7 @@ CREATE TABLE IF NOT EXISTS billing_records (
     FOREIGN KEY (appointment_id) REFERENCES appointments (appointment_id)
 );
 
-
+-- TODO: Add 20k more records to match the appointments table count
 LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\billing_records2.csv' INTO
 TABLE billing_records FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
     billing_record_id,
@@ -227,19 +212,21 @@ TABLE billing_records FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES 
     payment_type
 );
 
-CREATE TABLE IF NOT EXISTS doctor_appointment (
+CREATE TABLE IF NOT EXISTS doctor_appointments (
     doctor_appointment_id INT AUTO_INCREMENT PRIMARY KEY,
     licence_id CHAR(19) REFERENCES doctors (licence_id),
     appointment_id INT,
     FOREIGN KEY (appointment_id) REFERENCES appointments (appointment_id)
 );
 
-LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\doctor_appointment.csv' 
-INTO TABLE doctor_appointment FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
-    doctor_appointment_id,
-    licence_id,
-    appointment_id
-);
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\doctor_appointment.csv' INTO
+TABLE doctor_appointments FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
+     doctor_appointment_id, 
+     licence_id,
+     appointment_id
+ );
+
+
 -- Todo: get doctor appointments data. 
 
 DROP TABLE IF EXISTS doctor_schedules;
@@ -250,14 +237,6 @@ CREATE TABLE IF NOT EXISTS doctor_schedules (
     shift_start DATETIME,
     shift_length_mins SMALLINT
 );
-LOAD DATA
-INFILE 'C:\\_data\\capstone_bandaid_brigade\\doctor_schedules.csv'
-INTO TABLE doctor_schedules
-FIELDS TERMINATED BY ','
-OPTIONALLY ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES
-(licence_id, shift_start, shift_length_mins);
 
 -- LAYER 3 BEGIN
 DROP TABLE IF EXISTS fee_schedule_billing_records;
@@ -273,35 +252,28 @@ CREATE TABLE IF NOT EXISTS fee_schedule_billing_records (
     FOREIGN KEY (fee_schedule_id) REFERENCES fee_schedules (fee_schedule_id)
 );
 
-LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\fee_schedule_billing_records.csv' INTO
-TABLE fee_schedule_billing_records FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
-    billing_record_id,
-    fee_schedule_id
-);
-
-DROP TABLE IF EXISTS prescription;
+DROP TABLE IF EXISTS prescriptions;
 
 CREATE TABLE IF NOT EXISTS prescriptions (
     prescription_id INT AUTO_INCREMENT PRIMARY KEY,
     drug_name VARCHAR(100) NOT NULL,
-    dosage VARCHAR(50),
+    dosage VARCHAR(60),
     start_date DATE,
     end_date DATE,
-    doctor_appointment_id INT NOT NULL,
+    doctor_appointment_id INT,
     FOREIGN KEY (doctor_appointment_id) REFERENCES doctor_appointments (doctor_appointment_id)
 );
 
--- TODO: Fix prescription data to match
--- the id values in the doctor_appointments table
--- ... after that table has data. 
--- LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\prescriptions.csv' INTO
--- TABLE prescriptions FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
---     drug_name,
---     dosage,
---     start_date,
---     end_date,
---     doctor_appointment_id
--- );
+-- 
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\prescriptions.csv' INTO
+TABLE prescriptions FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
+     prescription_id,
+     drug_name,
+     dosage,
+     start_date,
+     end_date,
+     doctor_appointment_id
+ );
 
 DROP TABLE IF EXISTS appointment_diagnoses;
 
@@ -315,22 +287,3 @@ CREATE TABLE IF NOT EXISTS appointment_diagnoses (
     FOREIGN KEY (diagnosis_id) REFERENCES diagnoses (diagnosis_id),
     FOREIGN KEY (doctor_appointment_id) REFERENCES doctor_appointments (doctor_appointment_id)
 );
-
--- Jenn Queries 
-
--- Count the number of times that the patient “Amelia S Choi” has cancelled an appointment with less than 24 hours notice 
--- (cancelled an appointment less than 24 hours before the appointment was due to occur). 
-
-SELECT status, first_name, last_name, cancel_minutes_before
-FROM appointments a
-JOIN patients p ON a.PHIN_id = p.PHIN_id
-WHERE last_name = 'choi'
-    AND first_name = 'Amelia S'
-    AND a.cancel_minutes_before <= 1400
-GROUP BY a.status
-
-
-
-
-
--- Which 5 medications are most prescribed for “Type 2 Diabetes” diagnoses?
