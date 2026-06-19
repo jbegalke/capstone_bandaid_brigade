@@ -1,4 +1,4 @@
--- Active: 1778606967613@@127.0.0.1@3306@rrc_clinic
+-- Active: 1778692171925@@127.0.0.1@3306@rrc_clinic
 DROP DATABASE IF EXISTS rrc_clinic;
 
 CREATE DATABASE IF NOT EXISTS rrc_clinic;
@@ -355,3 +355,33 @@ JOIN billing_records br
     ON a.appointment_id = br.appointment_id
 ORDER BY total_fee DESC
 LIMIT 1
+
+
+-- Q5: Which appointment type had the highest average duration over the past 6 months?
+
+-- appointment type
+-- Average duration
+-- filter for past 6 months
+-- 2022-11-01 calculating  6 months back from 2023-05-01 ( so in question alex may ask in any time frame )
+-- 
+
+
+-- Group by appointment type
+
+-- Define appointment table
+-- connections
+--  
+-- filter WHERE  start_date > 2022-11-01
+-- GROUP BY appointment_type
+-- average duration
+-- ORDER BY desc
+-- LIMIT - 10
+
+
+SELECT appointment_type,
+AVG(duration_mins) AS avg_duration
+FROM appointments
+WHERE start_date > '2022-11-01'
+GROUP BY appointment_type
+ORDER BY avg_duration DESC;
+
