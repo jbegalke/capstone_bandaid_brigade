@@ -1,8 +1,4 @@
-<<<<<<< HEAD
--- Active: 1778606857022@@127.0.0.1@3306@rrc_clinic
-=======
--- Active: 1778692171925@@127.0.0.1@3306@rrc_clinic
->>>>>>> f5f779118de856e784bd6d0bec5c7d1f2bd38676
+
 DROP DATABASE IF EXISTS rrc_clinic;
 
 CREATE DATABASE IF NOT EXISTS rrc_clinic;
@@ -243,6 +239,18 @@ CREATE TABLE IF NOT EXISTS doctor_schedules (
     shift_length_mins SMALLINT
 );
 
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\doctor_schedules.csv'
+INTO TABLE doctor_schedules
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(
+    licence_id,
+    shift_start,
+    shift_length_mins
+);
+
 -- LAYER 3 BEGIN
 DROP TABLE IF EXISTS fee_schedule_billing_records;
 
@@ -431,3 +439,68 @@ GROUP BY appointment_type
 ORDER BY avg_duration DESC;
 
 
+-- Q8: Which appointment generated the largest uninsured balance
+-- (the highest amount that the patient had to pay after insurance)?
+
+-- Define tables FROM - appointments table, billing_records table, patients table
+-- connections
+-- JOIN appointments and billing_records
+-- JOIN patients
+-- filter WHERE -
+-- GROUP BY -
+-- HAVING -
+-- ORDER BY patient_balance DESC
+-- LIMIT 1
+-- SELECT
+
+SELECT
+    a.appointment_id,
+    p.PHIN_id,
+    p.first_name,
+    p.last_name,
+    br.total_fee,
+    br.insurance_covered,
+    br.patient_balance
+FROM appointments a
+JOIN billing_records br
+    ON a.appointment_id = br.appointment_id
+JOIN patients p
+    ON a.PHIN_id = p.PHIN_id
+ORDER BY br.patient_balance DESC
+LIMIT 1;
+
+
+-- Q10: List all the doctors that worked outside their scheduled hours
+-- and identify the appointments where it happened.
+
+-- Define tables FROM - doctors table, doctor_schedules table,
+-- doctor_appointments table, appointments table
+-- connections
+-- JOIN doctors and doctor_schedules
+-- JOIN doctor_appointments
+-- JOIN appointments
+-- filter WHERE appointment date is before the doctor's scheduled shift
+-- OR appointment date is after the doctor's scheduled shift
+-- GROUP BY -
+-- HAVING -
+-- ORDER BY doctor last name
+-- LIMIT -
+-- SELECT
+
+SELECT
+    d.first_name,
+    d.last_name,
+    a.appointment_id,
+    a.start_date,
+    ds.shift_start,
+    ds.shift_length_mins
+FROM doctors d
+JOIN doctor_schedules ds
+    ON d.licence_id = ds.licence_id
+JOIN doctor_appointments da
+    ON d.licence_id = da.licence_id
+JOIN appointments a
+    ON da.appointment_id = a.appointment_id
+WHERE a.start_date < DATE(ds.shift_start)
+   OR a.start_date > DATE(ds.shift_start)
+ORDER BY d.last_name, d.first_name;
