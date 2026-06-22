@@ -306,7 +306,30 @@ TABLE appointment_diagnoses FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' 
     diagnosis_id,
     doctor_appointment_id
  );
+
 -- Query Challenges
+-- Q1: List all the appointments that “Dr. Langford” attended in the last year.
+
+-- Define tables FROM -  appointment table 
+-- connections
+-- JOIN - doctor_appointment, doctors, patients 
+-- filter WHERE - last_name, appointment_status, date 
+-- GROUP BY 
+-- HAVING
+-- ORDER BY start_date
+-- LIMIT - 
+-- SELECT
+
+SELECT a.appointment_id, p.`PHIN_id`, p.first_name, p.last_name, a.start_date
+FROM appointments a 
+JOIN doctor_appointments da ON da.appointment_id = a.appointment_id 
+JOIN doctors d ON d.licence_id = da.licence_id 
+JOIN patients p ON p.PHIN_id = a.PHIN_id
+WHERE d.last_name = 'Langford'
+AND a.status = 'Completed'
+AND a.start_date BETWEEN '2025-06-21' AND '2026-06-21'
+ORDER BY a.start_date;
+
 -- Q2. Count the number of times that the patient “Sofia Q Singh - 102193780” has cancelled an appointment with less than 24 hours notice 
 -- (cancelled an appointment less than 24 hours before the appointment was due to occur).
  
@@ -324,10 +347,7 @@ SELECT first_name, last_name, cancel_minutes_before, status
 FROM patients p
 JOIN appointments a ON p.PHIN_id = a.PHIN_id
 WHERE p.`PHIN_id` = 102193780
-
-
-
-    
+ 
 SELECT * FROM patients
 WHERE `PHIN_id` = 102193780
 
@@ -354,7 +374,6 @@ ORDER BY prescription_id DESC
 -- JOIN prescriptions p ON da.appointment_id = p.doctor_appointment_id
 -- WHERE d.licence_id = 'H551-BNMK-442T-222G'
 
-
 -- Define tables FROM - patient table, appointment  table 
 -- connections
 -- JOIN patients and appointment 
@@ -366,49 +385,17 @@ ORDER BY prescription_id DESC
 -- SELECT
 
 --Q4: Find the most expensive appointment.
-
+    -- Thinking Order
+        -- Tables: appointments, billing records
+        -- JOIN between ^ at appointment_id
+        -- ORDER BY DESC to see highest to lowest appointment costs
+        -- LIMIT to only see most expensive
 SELECT br.total_fee, a.appointment_id
 FROM appointments a
 JOIN billing_records br
     ON a.appointment_id = br.appointment_id
 ORDER BY total_fee DESC
-LIMIT 1
-
--- Q1: List all the appointments that “Dr. Langford” attended in the last year.
-
--- Define tables FROM -  appointment table 
--- connections
--- JOIN - doctor_appointment, doctors, patients 
--- filter WHERE - last_name, appointment_status, date 
--- GROUP BY 
--- HAVING
--- ORDER BY start_date
--- LIMIT - 
--- SELECT
-
-SELECT a.appointment_id, p.`PHIN_id`, p.first_name, p.last_name, a.start_date
-FROM appointments a 
-JOIN doctor_appointments da ON da.appointment_id = a.appointment_id 
-JOIN doctors d ON d.licence_id = da.licence_id 
-JOIN patients p ON p.PHIN_id = a.PHIN_id
-WHERE d.last_name = 'Langford'
-AND a.status = 'Completed'
-AND a.start_date BETWEEN '2025-06-21' AND '2026-06-21'
-ORDER BY a.start_date;
-
-
---Q9: For each patient, list their first-ever diagnosis and the doctor that diagnosed it.
-
--- Define tables FROM -  patient table 
--- connections
--- JOIN - doctor_appointment, doctors, patients, appointments, appointments_diagnoses 
--- filter WHERE -  
--- GROUP BY 
--- HAVING
--- ORDER BY start_date
--- LIMIT - 
--- SELECT
-=======
+LIMIT 1;
 
 -- Q5: Which appointment type had the highest average duration over the past 6 months?
 
@@ -416,8 +403,6 @@ ORDER BY a.start_date;
 -- Average duration
 -- filter for past 6 months
 -- 2022-11-01 calculating  6 months back from 2023-05-01 ( so in question alex may ask in any time frame )
--- 
-
 
 -- Group by appointment type
 
@@ -430,13 +415,30 @@ ORDER BY a.start_date;
 -- ORDER BY desc
 -- LIMIT - 10
 
-
 SELECT appointment_type,
 AVG(duration_mins) AS avg_duration
 FROM appointments
 WHERE start_date > '2022-11-01'
 GROUP BY appointment_type
 ORDER BY avg_duration DESC;
+
+--Q6: Which day of the week has the highest number of completed appointments in the past 6 months?
+    -- Thinking Order
+        -- Tables: appointments
+        -- WHERE to filter last 6 months and completed appointments
+        -- GROUP BY for each weekday to correspond to a total number of appointments
+        -- ORDER BY DESC to see the highest to lowest # of appointments
+        -- LIMIT to only see the weekday with the highest # of appointment
+
+SELECT 
+    DAYNAME(a.start_date) AS weekday, 
+    COUNT(*) AS num_of_appointments
+FROM appointments a
+WHERE 
+    start_date > '2025-12-01' 
+    AND a.status = "Completed"
+GROUP BY weekday
+ORDER BY num_of_appointments DESC;
 
 
 -- Q8: Which appointment generated the largest uninsured balance
@@ -469,6 +471,17 @@ JOIN patients p
 ORDER BY br.patient_balance DESC
 LIMIT 1;
 
+--Q9: For each patient, list their first-ever diagnosis and the doctor that diagnosed it.
+
+-- Define tables FROM -  patient table 
+-- connections
+-- JOIN - doctor_appointment, doctors, patients, appointments, appointments_diagnoses 
+-- filter WHERE -  
+-- GROUP BY 
+-- HAVING
+-- ORDER BY start_date
+-- LIMIT - 
+-- SELECT
 
 -- Q10: List all the doctors that worked outside their scheduled hours
 -- and identify the appointments where it happened.
