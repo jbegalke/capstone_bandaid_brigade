@@ -1,4 +1,4 @@
--- Active: 1778606967613@@127.0.0.1@3306@rrc_clinic
+-- Active: 1778606857022@@127.0.0.1@3306@rrc_clinic
 DROP DATABASE IF EXISTS rrc_clinic;
 
 CREATE DATABASE IF NOT EXISTS rrc_clinic;
@@ -288,6 +288,12 @@ CREATE TABLE IF NOT EXISTS appointment_diagnoses (
     FOREIGN KEY (diagnosis_id) REFERENCES diagnoses (diagnosis_id),
     FOREIGN KEY (doctor_appointment_id) REFERENCES doctor_appointments (doctor_appointment_id)
 );
+
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\appointment_diagnoses.csv' INTO
+TABLE appointment_diagnoses FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
+    diagnosis_id,
+    doctor_appointment_id
+ );
 -- Query Challenges
 -- Q2. Count the number of times that the patient “Sofia Q Singh - 102193780” has cancelled an appointment with less than 24 hours notice 
 -- (cancelled an appointment less than 24 hours before the appointment was due to occur).
@@ -355,3 +361,39 @@ JOIN billing_records br
     ON a.appointment_id = br.appointment_id
 ORDER BY total_fee DESC
 LIMIT 1
+
+-- Q1: List all the appointments that “Dr. Langford” attended in the last year.
+
+-- Define tables FROM -  appointment table 
+-- connections
+-- JOIN - doctor_appointment, doctors, patients 
+-- filter WHERE - last_name, appointment_status, date 
+-- GROUP BY 
+-- HAVING
+-- ORDER BY start_date
+-- LIMIT - 
+-- SELECT
+
+SELECT a.appointment_id, p.`PHIN_id`, p.first_name, p.last_name, a.start_date
+FROM appointments a 
+JOIN doctor_appointments da ON da.appointment_id = a.appointment_id 
+JOIN doctors d ON d.licence_id = da.licence_id 
+JOIN patients p ON p.PHIN_id = a.PHIN_id
+WHERE d.last_name = 'Langford'
+AND a.status = 'Completed'
+AND a.start_date BETWEEN '2025-06-21' AND '2026-06-21'
+ORDER BY a.start_date;
+
+
+--Q9: For each patient, list their first-ever diagnosis and the doctor that diagnosed it.
+
+-- Define tables FROM -  patient table 
+-- connections
+-- JOIN - doctor_appointment, doctors, patients, appointments, appointments_diagnoses 
+-- filter WHERE -  
+-- GROUP BY 
+-- HAVING
+-- ORDER BY start_date
+-- LIMIT - 
+-- SELECT
+
