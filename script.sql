@@ -359,30 +359,27 @@ WHERE `PHIN_id` = 102193780
 -- where = dug.name = "Amoxicillin"
 -- order BY
 
-SELECT d.first_name, d.last_name, prescription_id
-FROM doctors d
-JOIN doctor_appointments da ON d.licence_id = da.licence_id
-JOIN prescriptions p ON da.appointment_id = p.doctor_appointment_id
-WHERE p.drug_name = "Amoxicillin"
-GROUP BY d.first_name, d.last_name
-HAVING COUNT(prescription_id)
-ORDER BY prescription_id DESC
-
--- SELECT p.prescription_id, d.first_name, d.last_name
+-- SELECT d.first_name, d.last_name, prescription_id
 -- FROM doctors d
 -- JOIN doctor_appointments da ON d.licence_id = da.licence_id
 -- JOIN prescriptions p ON da.appointment_id = p.doctor_appointment_id
--- WHERE d.licence_id = 'H551-BNMK-442T-222G'
+-- WHERE p.drug_name = "Amoxicillin"
+-- GROUP BY d.first_name, d.last_name
+-- HAVING COUNT(prescription_id)
+-- ORDER BY prescription_id DESC
 
--- Define tables FROM - patient table, appointment  table 
--- connections
--- JOIN patients and appointment 
--- filter WHERE x = cancelled 
--- GROUP BY status
--- HAVING
--- ORDER BY desc
--- LIMIT - (24 hrs in minutes is 1440) less than 1440
--- SELECT
+SELECT dr.first_name, dr.last_name, 
+    COUNT(p.prescription_id) 
+FROM doctors dr
+JOIN doctor_appointments da 
+    ON da.licence_id = dr.licence_id
+JOIN prescriptions p 
+    ON p.doctor_appointment_id = da.doctor_appointment_id
+WHERE p.drug_name = 'Amoxicillin'
+GROUP BY dr.first_name, dr.last_name
+Order BY COUNT(p.prescription_id)
+
+
 
 --Q4: Find the most expensive appointment.
     -- Thinking Order
@@ -421,6 +418,13 @@ FROM appointments
 WHERE start_date > '2022-11-01'
 GROUP BY appointment_type
 ORDER BY avg_duration DESC;
+
+SELECT a.appointment_type, AVG(a.duration_mins)
+FROM appointments a
+WHERE a.start_date >= DATE_SUB(CURDATE(), INTERVAL 6 MONTH)
+GROUP BY a.appointment_type
+ORDER BY AVG(a.duration_mins) DESC -- solving highest
+LIMIT 1 -- show only one resolve
 
 --Q6: Which day of the week has the highest number of completed appointments in the past 6 months?
     -- Thinking Order
