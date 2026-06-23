@@ -276,6 +276,12 @@ CREATE TABLE IF NOT EXISTS fee_schedule_billing_records (
     FOREIGN KEY (fee_schedule_id) REFERENCES fee_schedules (fee_schedule_id)
 );
 
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\fee_schedule_billing_records.csv' INTO
+TABLE fee_schedule_billing_records FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
+    billing_record_id,
+    fee_schedule_id
+ );
+ 
 DROP TABLE IF EXISTS prescriptions;
 
 CREATE TABLE IF NOT EXISTS prescriptions (
