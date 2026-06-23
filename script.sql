@@ -440,6 +440,38 @@ WHERE
 GROUP BY weekday
 ORDER BY num_of_appointments DESC;
 
+-- Q7. JENN - Which 5 medications are most prescribed for “Type 2 Diabetes Mellitus” diagnoses?
+
+-- Thinking Process
+-- Define tables FROM - patient, appointment, diagnosis, appointment_diagnoses, doctor_appointments and prescription
+-- JOIN 
+    -- d.diagnoses_id ON ad.diagnosis_id
+    -- ad.doctor_appointment_id ON da.doctor_appointment_id'
+    -- da.doctor_appointment_id ON pr.doctor_appointment_id
+    -- da.appointment_id ON a.appointment_id
+    -- a.PHIN_id ON pa.PHIN_id
+-- filter WHERE 
+    -- d.name = X
+-- GROUP BY - pr.prescriptions
+-- HAVING - count(pr.prescription_id)
+-- ORDER BY - DESC
+-- LIMIT - 5
+-- SELECT - d.name, pr.prescriptions, count AS "num_times_prescribed"
+
+-- TABLE DATA IS MISSING!!!!
+
+SELECT d.name, COUNT(pr.prescription_id) AS total_number_presc
+FROM diagnoses d
+JOIN appointment_diagnoses ad ON d.diagnosis_id = ad.diagnosis_id
+JOIN doctor_appointments da ON ad.doctor_appointment_id = da.doctor_appointment_id
+JOIN prescriptions pr ON da.doctor_appointment_id = pr.doctor_appointment_id
+JOIN appointments a ON da.appointment_id = a.appointment_id
+WHERE d.name = "Type 2 Diabetes Mellitus"
+GROUP BY d.name, pr.prescription_id;
+-- HAVING count(pr.prescription_id)
+-- ORDER BY pr.prescription_id DESC
+-- LIMIT 5
+
 
 -- Q8: Which appointment generated the largest uninsured balance
 -- (the highest amount that the patient had to pay after insurance)?
