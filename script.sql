@@ -103,7 +103,9 @@ TABLE fee_schedules FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TE
 );
 
 -- LAYER 1 BEGIN
-CREATE TABLE patient_allergies (
+DROP TABLE IF EXISTS patient_allergies ;
+
+CREATE TABLE IF NOT EXISTS patient_allergies (
     PHIN_id INT,
     allergy_id INT,
     PRIMARY KEY (PHIN_id, allergy_id),
