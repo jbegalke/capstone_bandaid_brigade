@@ -111,6 +111,15 @@ CREATE TABLE patient_allergies (
     FOREIGN KEY (allergy_id) REFERENCES allergies (allergy_id)
 );
 
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\patient_allergies.csv'
+IGNORE
+INTO TABLE patient_allergies
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(PHIN_id, allergy_id);
+
 DROP TABLE IF EXISTS doctors;
 
 CREATE TABLE IF NOT EXISTS doctors (
