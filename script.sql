@@ -480,8 +480,8 @@ WHERE
     start_date > '2025-12-01' 
     AND a.status = "Completed"
 GROUP BY weekday
-ORDER BY num_of_appointments DESC;
-
+ORDER BY num_of_appointments DESC
+LIMIT 1;
 -- Q7. JENN - Which 5 medications are most prescribed for “Migraine” diagnoses?
 
 -- Thinking Process
