@@ -434,20 +434,35 @@ LIMIT 1;
 -- Group by appointment type
 
 -- Define appointment table
--- connections
---  
+-- connections -inside the appointment
+--  max function a nd avg function and date function
 -- filter WHERE  start_date > 2022-11-01
 -- GROUP BY appointment_type
 -- average duration
 -- ORDER BY desc
 -- LIMIT - 10
 
+-- max(AVG a.duration_mins) --not working
+-- Not done by Mina
 SELECT appointment_type,
 AVG(duration_mins) AS avg_duration
-FROM appointments
-WHERE start_date > '2022-11-01'
+FROM appointments a
+WHERE a.start_date > '2022-11-01'
 GROUP BY appointment_type
-ORDER BY avg_duration DESC;
+ORDER BY avg_duration DESC
+LIMIT 1
+
+-- SELECT a.appointment_type, MAX(AVG(a.duration_mins))
+-- FROM appointments a
+-- WHERE a.start_date BETWEEN '2022-12-01' AND '2023-05-01'
+-- GROUP BY a.appointment
+
+SELECT a.appointment_type, AVG(a.duration_mins)
+FROM appointments a
+WHERE a.start_date >= DATE_SUB(CURDATE(), INTERVAL 6 MONTH)
+GROUP BY a.appointment_type
+ORDER BY AVG(a.duration_mins) DESC -- solving highest
+LIMIT 1 -- show only one resolve
 
 --Q6: Which day of the week has the highest number of completed appointments in the past 6 months?
     -- Thinking Order
