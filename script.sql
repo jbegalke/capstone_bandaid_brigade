@@ -1,4 +1,3 @@
--- Active: 1778606857022@@127.0.0.1@3306@rrc_clinic
 
 DROP DATABASE IF EXISTS rrc_clinic;
 
@@ -37,8 +36,12 @@ CREATE TABLE allergies (
 );
 
 -- TODO: fix this
-LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\allergies.csv' INTO
-TABLE allergies FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (allergy_id, name)
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\allergies.csv' 
+INTO TABLE allergies 
+FIELDS TERMINATED BY ',' 
+OPTIONALLY ENCLOSED BY '"' 
+LINES TERMINATED BY '\n' 
+IGNORE 1 LINES (allergy_id, name)
 
 DROP TABLE IF EXISTS insurance_providers;
 
@@ -104,7 +107,7 @@ TABLE fee_schedules FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TE
 );
 
 -- LAYER 1 BEGIN
-DROP TABLE IF EXISTS patient_allergies ;
+DROP TABLE IF EXISTS patient_allergies;
 
 CREATE TABLE IF NOT EXISTS patient_allergies (
     PHIN_id INT,
@@ -114,14 +117,15 @@ CREATE TABLE IF NOT EXISTS patient_allergies (
     FOREIGN KEY (allergy_id) REFERENCES allergies (allergy_id)
 );
 
-LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\patient_allergies.csv'
-IGNORE
-INTO TABLE patient_allergies
-FIELDS TERMINATED BY ','
-OPTIONALLY ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES
-(PHIN_id, allergy_id);
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\patient_allergies.csv' 
+INTO TABLE patient_allergies 
+FIELDS TERMINATED BY ',' 
+OPTIONALLY ENCLOSED BY '"' 
+LINES TERMINATED BY '\n' 
+IGNORE 1 LINES (
+   PHIN_id,
+   allergy_id
+);
 
 DROP TABLE IF EXISTS doctors;
 
@@ -277,12 +281,16 @@ CREATE TABLE IF NOT EXISTS fee_schedule_billing_records (
     FOREIGN KEY (fee_schedule_id) REFERENCES fee_schedules (fee_schedule_id)
 );
 
-LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\fee_schedule_billing_records.csv' INTO
-TABLE fee_schedule_billing_records FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 LINES (
+LOAD DATA INFILE 'C:\\_data\\capstone_bandaid_brigade\\fee_schedule_billing_records.csv' 
+INTO TABLE fee_schedule_billing_records
+FIELDS TERMINATED BY ',' 
+OPTIONALLY ENCLOSED BY '"' 
+LINES TERMINATED BY '\n' 
+IGNORE 1 LINES (
     billing_record_id,
     fee_schedule_id
- );
- 
+);
+
 DROP TABLE IF EXISTS prescriptions;
 
 CREATE TABLE IF NOT EXISTS prescriptions (
@@ -348,26 +356,33 @@ AND a.status = 'Completed'
 AND a.start_date BETWEEN '2025-06-21' AND '2026-06-21'
 ORDER BY a.start_date;
 
--- Q2. Count the number of times that the patient “Sofia Q Singh - 102193780” has cancelled an appointment with less than 24 hours notice 
+-- Q2. JENN Count the number of times that the patient “Ravi C Brown” has cancelled an appointment with less than 24 hours notice 
 -- (cancelled an appointment less than 24 hours before the appointment was due to occur).
- 
--- Define tables FROM - patient table, appointment  table 
--- connections
--- JOIN patients and appointment 
--- filter WHERE x = cancelled 
--- GROUP BY status
--- HAVING
--- ORDER BY desc
--- LIMIT - (24 hrs in minutes is 1440) less than 1440
--- SELECT
 
-SELECT first_name, last_name, cancel_minutes_before, status
+-- Thinking Process
+-- Define tables FROM - patient table, appointment  table 
+-- JOIN patients and appointment 
+    -- ON PHIN-id
+-- filter WHERE 
+    -- first_name = Ravi C
+    -- last_name = Brown
+    -- status = cancelled
+    -- cancel_minutes_before less than 1400
+-- GROUP BY first and last name
+-- HAVING - none
+-- ORDER BY - none
+-- LIMIT - none
+-- SELECT - PHIN_id, first_name, last_name and count
+
+SELECT p.`PHIN_id`, p.first_name, p.last_name, COUNT(*) AS total_cancelations_24hrs
 FROM patients p
-JOIN appointments a ON p.PHIN_id = a.PHIN_id
-WHERE p.`PHIN_id` = 102193780
- 
-SELECT * FROM patients
-WHERE `PHIN_id` = 102193780
+JOIN appointments a ON a.`PHIN_id` = p.`PHIN_id`
+WHERE p.first_name = 'Ravi C'
+    AND p.last_name = 'Brown'
+    AND a.status = 'cancelled'
+    AND a.cancel_minutes_before < 1440
+GROUP BY p.`PHIN_id`, p.first_name, p.last_name
+
 
 -- Q3. MINA - Sort the doctors by the 
 -- number of prescriptions of the drug “Amoxicillin” they’ve given to patients.
@@ -377,27 +392,30 @@ WHERE `PHIN_id` = 102193780
 -- where = dug.name = "Amoxicillin"
 -- order BY
 
--- SELECT d.first_name, d.last_name, prescription_id
+SELECT d.first_name, d.last_name, prescription_id
+FROM doctors d
+JOIN doctor_appointments da ON d.licence_id = da.licence_id
+JOIN prescriptions p ON da.appointment_id = p.doctor_appointment_id
+WHERE p.drug_name = "Amoxicillin"
+GROUP BY d.first_name, d.last_name
+HAVING COUNT(prescription_id)
+ORDER BY prescription_id DESC
+
+-- SELECT p.prescription_id, d.first_name, d.last_name
 -- FROM doctors d
 -- JOIN doctor_appointments da ON d.licence_id = da.licence_id
 -- JOIN prescriptions p ON da.appointment_id = p.doctor_appointment_id
--- WHERE p.drug_name = "Amoxicillin"
--- GROUP BY d.first_name, d.last_name
--- HAVING COUNT(prescription_id)
--- ORDER BY prescription_id DESC
+-- WHERE d.licence_id = 'H551-BNMK-442T-222G'
 
-SELECT dr.first_name, dr.last_name, 
-    COUNT(p.prescription_id) 
-FROM doctors dr
-JOIN doctor_appointments da 
-    ON da.licence_id = dr.licence_id
-JOIN prescriptions p 
-    ON p.doctor_appointment_id = da.doctor_appointment_id
-WHERE p.drug_name = 'Amoxicillin'
-GROUP BY dr.first_name, dr.last_name
-Order BY COUNT(p.prescription_id)
-
-
+-- Define tables FROM - patient table, appointment  table 
+-- connections
+-- JOIN patients and appointment 
+-- filter WHERE x = cancelled 
+-- GROUP BY status
+-- HAVING
+-- ORDER BY desc
+-- LIMIT - (24 hrs in minutes is 1440) less than 1440
+-- SELECT
 
 --Q4: Find the most expensive appointment.
     -- Thinking Order
@@ -437,13 +455,6 @@ WHERE start_date > '2022-11-01'
 GROUP BY appointment_type
 ORDER BY avg_duration DESC;
 
-SELECT a.appointment_type, AVG(a.duration_mins)
-FROM appointments a
-WHERE a.start_date >= DATE_SUB(CURDATE(), INTERVAL 6 MONTH)
-GROUP BY a.appointment_type
-ORDER BY AVG(a.duration_mins) DESC -- solving highest
-LIMIT 1 -- show only one resolve
-
 --Q6: Which day of the week has the highest number of completed appointments in the past 6 months?
     -- Thinking Order
         -- Tables: appointments
@@ -462,7 +473,7 @@ WHERE
 GROUP BY weekday
 ORDER BY num_of_appointments DESC;
 
--- Q7. JENN - Which 5 medications are most prescribed for “Type 2 Diabetes Mellitus” diagnoses?
+-- Q7. JENN - Which 5 medications are most prescribed for “Migraine” diagnoses?
 
 -- Thinking Process
 -- Define tables FROM - patient, appointment, diagnosis, appointment_diagnoses, doctor_appointments and prescription
@@ -482,17 +493,16 @@ ORDER BY num_of_appointments DESC;
 
 -- TABLE DATA IS MISSING!!!!
 
-SELECT d.name, COUNT(pr.prescription_id) AS total_number_presc
+SELECT d.name, pr.drug_name, COUNT(*) AS total_number_presc
 FROM diagnoses d
 JOIN appointment_diagnoses ad ON d.diagnosis_id = ad.diagnosis_id
 JOIN doctor_appointments da ON ad.doctor_appointment_id = da.doctor_appointment_id
 JOIN prescriptions pr ON da.doctor_appointment_id = pr.doctor_appointment_id
 JOIN appointments a ON da.appointment_id = a.appointment_id
-WHERE d.name = "Type 2 Diabetes Mellitus"
-GROUP BY d.name, pr.prescription_id;
--- HAVING count(pr.prescription_id)
--- ORDER BY pr.prescription_id DESC
--- LIMIT 5
+WHERE d.name LIKE '%Migraine%' -- LIKE is used to search for patterns in text, % allows for any number of characters so it does not need to be an exact match
+GROUP BY pr.drug_name, pr.drug_name
+ORDER BY total_number_presc DESC
+LIMIT 5;
 
 
 -- Q8: Which appointment generated the largest uninsured balance
@@ -533,34 +543,9 @@ LIMIT 1;
 -- filter WHERE -  
 -- GROUP BY 
 -- HAVING
--- ORDER BY p.first_name
+-- ORDER BY start_date
 -- LIMIT - 
 -- SELECT
-
-SELECT
-    p.first_name AS patient_first_name,
-    p.last_name AS patient_last_name,
-    d.name AS diagnosis_name,
-    doc.first_name AS doctor_first_name,
-    doc.last_name AS doctor_last_name,
-    a.start_date
-FROM appointments a
-JOIN patients p
-    ON p.`PHIN_id` = a.`PHIN_id`
-JOIN doctor_appointments da
-    ON da.appointment_id = a.appointment_id
-JOIN appointment_diagnoses ad
-    ON ad.doctor_appointment_id = da.doctor_appointment_id
-JOIN diagnoses d
-    ON d.diagnosis_id = ad.diagnosis_id
-JOIN doctors doc
-    ON doc.licence_id = da.licence_id
-WHERE a.start_date = (
-    SELECT MIN(start_date)
-    FROM appointments a2
-    WHERE a2.`PHIN_id` = a.`PHIN_id`
-)
-ORDER BY p.first_name;
 
 -- Q10: List all the doctors that worked outside their scheduled hours
 -- and identify the appointments where it happened.
