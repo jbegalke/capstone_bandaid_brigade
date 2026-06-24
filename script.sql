@@ -392,14 +392,16 @@ GROUP BY p.`PHIN_id`, p.first_name, p.last_name
 -- where = dug.name = "Amoxicillin"
 -- order BY
 
-SELECT d.first_name, d.last_name, prescription_id
+
+SELECT d.first_name, d.last_name, count(prescription_id)
 FROM doctors d
 JOIN doctor_appointments da ON d.licence_id = da.licence_id
 JOIN prescriptions p ON da.appointment_id = p.doctor_appointment_id
 WHERE p.drug_name = "Amoxicillin"
 GROUP BY d.first_name, d.last_name
 HAVING COUNT(prescription_id)
-ORDER BY prescription_id DESC
+ORDER BY COUNT(prescription_id) DESC
+
 
 -- SELECT p.prescription_id, d.first_name, d.last_name
 -- FROM doctors d
@@ -407,15 +409,7 @@ ORDER BY prescription_id DESC
 -- JOIN prescriptions p ON da.appointment_id = p.doctor_appointment_id
 -- WHERE d.licence_id = 'H551-BNMK-442T-222G'
 
--- Define tables FROM - patient table, appointment  table 
--- connections
--- JOIN patients and appointment 
--- filter WHERE x = cancelled 
--- GROUP BY status
--- HAVING
--- ORDER BY desc
--- LIMIT - (24 hrs in minutes is 1440) less than 1440
--- SELECT
+
 
 --Q4: Find the most expensive appointment.
     -- Thinking Order
