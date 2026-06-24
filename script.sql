@@ -526,6 +526,32 @@ LIMIT 1;
 -- LIMIT - 
 -- SELECT
 
+SELECT
+    p.first_name AS patient_first_name,
+    p.last_name AS patient_last_name,
+    d.name AS diagnosis_name,
+    doc.first_name AS doctor_first_name,
+    doc.last_name AS doctor_last_name,
+    a.start_date
+FROM appointments a
+JOIN patients p
+    ON p.`PHIN_id` = a.`PHIN_id`
+JOIN doctor_appointments da
+    ON da.appointment_id = a.appointment_id
+JOIN appointment_diagnoses ad
+    ON ad.doctor_appointment_id = da.doctor_appointment_id
+JOIN diagnoses d
+    ON d.diagnosis_id = ad.diagnosis_id
+JOIN doctors doc
+    ON doc.licence_id = da.licence_id
+WHERE a.start_date = (
+    SELECT MIN(start_date)
+    FROM appointments a2
+    WHERE a2.`PHIN_id` = a.`PHIN_id`
+)
+ORDER BY p.first_name;
+ 
+
 -- Q10: List all the doctors that worked outside their scheduled hours
 -- and identify the appointments where it happened.
 
