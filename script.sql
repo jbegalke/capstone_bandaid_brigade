@@ -389,7 +389,7 @@ GROUP BY p.`PHIN_id`, p.first_name, p.last_name
 -- sort - order by
 -- the doctors - doctors table
 -- number of prescriptions - count(prescriptions)
--- filter the durg name - amoxicillin - where clause
+-- filter the drug name - amoxicillin - where clause
 -- using group by because I want the doctor to squeeze in a row
 -- having to filter the number of prescriptions
 
@@ -426,6 +426,12 @@ ORDER BY total_fee DESC
 LIMIT 1;
 
 -- Q5: Which appointment type had the highest average duration over the past 6 months?
+
+-- appointment type is from the appointment table
+-- break down highest average duration - avg(a.duration_mins)
+-- no need for join clause because duration is needed in the appointment table
+-- use the date_sub function 
+-- using the appointment_type because I want to squeeze the appointment type in a row
 
 SELECT a.appointment_type, AVG(a.duration_mins)
 FROM appointments a
