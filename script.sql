@@ -386,14 +386,15 @@ GROUP BY p.`PHIN_id`, p.first_name, p.last_name
 
 -- Q3. MINA - Sort the doctors by the 
 -- number of prescriptions of the drug “Amoxicillin” they’ve given to patients.
--- doctor TABLE
--- prescription table 
--- patients TABLE
--- where = dug.name = "Amoxicillin"
--- order BY
+-- sort - order by
+-- the doctors - doctors table
+-- number of prescriptions - count(prescriptions)
+-- filter the durg name - amoxicillin - where clause
+-- using group by because I want the doctor to squeeze in a row
+-- having to filter the number of prescriptions
 
 
-SELECT d.first_name, d.last_name, count(prescription_id)
+SELECT d.first_name, d.last_name, COUNT(prescription_id)
 FROM doctors d
 JOIN doctor_appointments da ON d.licence_id = da.licence_id
 JOIN prescriptions p ON da.appointment_id = p.doctor_appointment_id
@@ -425,37 +426,6 @@ ORDER BY total_fee DESC
 LIMIT 1;
 
 -- Q5: Which appointment type had the highest average duration over the past 6 months?
-
--- appointment type
--- Average duration
--- filter for past 6 months
--- 2022-11-01 calculating  6 months back from 2023-05-01 ( so in question alex may ask in any time frame )
-
--- Group by appointment type
-
--- Define appointment table
--- connections -inside the appointment
---  max function a nd avg function and date function
--- filter WHERE  start_date > 2022-11-01
--- GROUP BY appointment_type
--- average duration
--- ORDER BY desc
--- LIMIT - 10
-
--- max(AVG a.duration_mins) --not working
--- Not done by Mina
-SELECT appointment_type,
-AVG(duration_mins) AS avg_duration
-FROM appointments a
-WHERE a.start_date > '2022-11-01'
-GROUP BY appointment_type
-ORDER BY avg_duration DESC
-LIMIT 1
-
--- SELECT a.appointment_type, MAX(AVG(a.duration_mins))
--- FROM appointments a
--- WHERE a.start_date BETWEEN '2022-12-01' AND '2023-05-01'
--- GROUP BY a.appointment
 
 SELECT a.appointment_type, AVG(a.duration_mins)
 FROM appointments a
